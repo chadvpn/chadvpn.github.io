@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://chadvpn.github.io/news/article-61239.htm" />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>antDesign eggjs资源上传，并基于md5进行资源是否重复校验</title>
+        <meta name="description" content="1、UploadController 'use strict';  const Controller = require('egg').Controller;  class UploadControl" />
+        <link rel="icon" href="/assets/website/img/v2rayc/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="乍得VPN 机场订阅节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://chadvpn.github.io/news/article-61239.htm" />
+    <meta property="og:site_name" content="乍得VPN 机场订阅节点官网" />
+    <meta property="og:title" content="antDesign eggjs资源上传，并基于md5进行资源是否重复校验" />
+    <meta property="og:image" content="https://chadvpn.github.io/uploads/20241122/f384775d9ebdbc1dcee3260df1f602b0.webp" />
+        <meta property="og:release_date" content="2025-02-22T07:13:18" />
+    <meta property="og:updated_time" content="2025-02-22T07:13:18" />
+        <meta property="og:description" content="1、UploadController 'use strict';  const Controller = require('egg').Controller;  class UploadControl" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="antDesign eggjs资源上传，并基于md5进行资源是否重复校验">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="/assets/website/js/frontend/v2rayc/aos/aos.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/remixicon/remixicon.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="/assets/website/css/v2rayc/style.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8ZCRTLDBJK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8ZCRTLDBJK');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top header-inner-pages">
+        <div class="container d-flex align-items-center">
+            <a href="/">
+                            <span class="logo me-auto">乍得VPN</span>
+                        </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                                        <li><a class="nav-link" href="/">首页</a></li>
+                                        <li><a class="nav-link" href="/free-nodes/">免费节点</a></li>
+                                        <li><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                        <li><a class="nav-link" href="/client.htm">客户端</a></li>
+                                    </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+        </div>
+    </header><!-- End Header -->
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><a href="/">首页</a></li>
+                    <li><a href="/news/">新闻资讯</a></li>
+                    <li>正文</li>
+                </ol>
+                <h1>antDesign eggjs资源上传，并基于md5进行资源是否重复校验</h1>
+            </div>
+        </section><!-- End Breadcrumbs -->
+        <!-- ======= About Us Section ======= -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p>1、UploadController</p> <pre><code class="language-javascript">'use strict';  const Controller = require('egg').Controller;  class UploadController extends Controller {     async index() {         const {ctx} = this;         ctx.body = await ctx.service.upload.upload();     } }  module.exports = UploadController;</code></pre> <p>2、UploadService</p> <pre><code class="language-javascript">'use strict';  const Service = require('egg').Service; const path = require('path'); const fs = require('fs'); const crypto = require('crypto');  class UploadService extends Service {     /**      * 上传入口      * @returns {Promise.&lt;*&gt;}      */     async upload() {         const {ctx} = this;         // 获取 steam         const stream = await ctx.getFileStream();         /**          * 文件路径          */         const {uplaodBasePath, filename, filePath, name} = this.setFlieByStream(stream);         /**          * 检验md5          */         const {status, flieBuffer, data} = await this.checkMd5(stream, {filePath, name});         /**          * 如果找到md5 则直接将信息返回 不再重新生成资源          */         if (status === 'found') {             return this.createResponse(stream, data.path);         } else {             /**              * 生成文件目录              */             const {targetPath} = this.createUploadPath({uplaodBasePath, filename});             /**              * 图片信息写入              */             await this.writeFile({path: targetPath, file: flieBuffer});             /**              * 数据插入数据库              */             await this.createMD5(data);             return this.createResponse(stream, data.path);         }     }      /**      * 文件写入      * @param path      * @param file      * @returns {Promise}      */     async writeFile({path, file}) {         return new Promise((resolve, reject) =&gt; {             fs.writeFile(path, file, function (err) {                 if (err) reject(err);                 resolve('successed')             });         })     }      /**      * 创建响应      * @param stream      * @param filePath      * @returns {*}      */     createResponse(stream, filePath) {         return {path: filePath};     }      /**      * 检验md5      * @param stream      * @param fileInfo      * @returns {Promise}      */     async checkMd5(stream, fileInfo) {         const {ctx} = this;         const {filePath, name} = fileInfo;         /**          * 生成md5 然后先查询根据md5查询数据库          * 如果数据库存在 将值拿到直接返回 不在创建文件          * 如果值不存在 则创建文件后 再把路径返回          */         return new Promise((resolve, reject) =&gt; {             const fsHash = crypto.createHash('md5');             /**              * 保存流数据 后续用于写入              */             let flieBuffer;             stream.on('data', function (d) {                 flieBuffer ? flieBuffer = Buffer.concat([flieBuffer, d]) : flieBuffer = d;                 fsHash.update(d);             });             stream.on('end', function () {                 const md5 = fsHash.digest('hex');                 // 根据md5查询 是否存在                 ctx.connector.upload.fetchByMd5(md5).then(res =&gt; {                     // 存在该资源 编辑状态为found 然后返回                     if (res.dataValues) {                         resolve({                             data: res.dataValues,                             status: 'found'                         })                         //  不存在 则在数据库中创建该条资源 并将资源写入 标记状态为create                     } else {                         resolve({                             status: 'create',                             flieBuffer: flieBuffer,                             data: {                                 md5,                                 name,                                 path: filePath                             }                         })                     }                 })             });         });     }      /**      * 生成md5      */     async createMD5(data) {         const {ctx} = this;         /**          * 生成md5 然后先查询根据md5查询数据库          * 如果数据库存在 将值拿到直接返回 不在创建文件          * 如果值不存在 则创建文件后 再把路径返回          */         return new Promise((resolve, reject) =&gt; {             ctx.connector.upload.createMd5(data).then(res =&gt; {                 resolve({                     status: data                 })             });         });     }      /***      * 创建最终的文件夹 及文件名称      * @param filename      * @param uplaodBasePath      * @returns {<!-- -->{target: string}}      */     createUploadPath({filename, uplaodBasePath}) {         // 没有文件则创建文件目录         const filePath = path.join(this.config.baseDir, uplaodBasePath);         if (!fs.existsSync(filePath)) fs.mkdirSync(filePath);         // 生成写入路径         const targetPath = path.join(this.config.baseDir, uplaodBasePath, filename);         return {             targetPath         }     }      /**      * 设置文件路径和文件名称      * @param stream      * @returns {<!-- -->{uplaodBasePath: string, filename: string}}      */     setFlieByStream(stream) {         // 额外的路径         const _path = stream.fields.path || '';         const actionPath = _path ? _path + '/' : 'upload/';         // 上传基础目录         const uplaodBasePath = ('upload/' + actionPath).replace(/\/\//g, '/');         // 生成文件名         const filename = Date.now() + '_' + stream.filename;         // 返回文件路径         const filePath = `/${uplaodBasePath}${filename}`.replace(/\\/g, '/');         return {             uplaodBasePath,             filename,             filePath,             name: stream.filename         }     } }  module.exports = UploadService;</code></pre> <p>3、ant</p> <pre><code class="language-html"> &lt;Upload name="logo"                         {...upload}                         onChange={uploadOnChange}                         method="POST"                         multiple={false}                         action="/upload"                         data={UploadData}                         accept=".png,.jpg,.jpeg,.svg"                         listType="picture"&gt;                     {                         hasFileList ? '' :                             &lt;Button&gt;                                 &lt;UploadOutlined/&gt; 请选择背景图片                             &lt;/Button&gt;                     }                 &lt;/Upload&gt;</code></pre> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-60676.htm">动物疫苗批发厂家（动物疫苗哪里有卖）</a></p>
+                                        <p>下一个：<a href="/news/article-61240.htm">动物疫苗使用前的注意事项是什么呢（动物疫苗注射工作注意事项）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-2-23-free-v2ray-subscribe.htm" title="乍得VPN | 2月23日18M/S|免费Clash/V2ray/Shadowrocket/SSR免费节点订阅分享">乍得VPN | 2月23日18M/S|免费Clash/V2ray/Shadowrocket/SSR免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-60675.htm" title="springboot的定时任务">springboot的定时任务</a></li>
+                        <li class="py-2"><a href="/news/article-60116.htm" title="Spring Boot 新特性一键构建Docker镜像">Spring Boot 新特性一键构建Docker镜像</a></li>
+                        <li class="py-2"><a href="/news/article-60676.htm" title="动物疫苗批发厂家（动物疫苗哪里有卖）">动物疫苗批发厂家（动物疫苗哪里有卖）</a></li>
+                        <li class="py-2"><a href="/news/article-61240.htm" title="动物疫苗使用前的注意事项是什么呢（动物疫苗注射工作注意事项）">动物疫苗使用前的注意事项是什么呢（动物疫苗注射工作注意事项）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-22-free-node-subscribe-links.htm" title="乍得VPN | 2月22日22.6M/S|免费Clash/SSR/Shadowrocket/V2ray免费节点订阅分享">乍得VPN | 2月22日22.6M/S|免费Clash/SSR/Shadowrocket/V2ray免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-20-clash-v2ray-ss-ssr.htm" title="乍得VPN | 2月20日22.8M/S|免费Clash/Shadowrocket/SSR/V2ray免费节点订阅分享">乍得VPN | 2月20日22.8M/S|免费Clash/Shadowrocket/SSR/V2ray免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-21-free-node-subscribe.htm" title="乍得VPN | 2月21日22.4M/S|免费V2ray/Clash/SSR/Shadowrocket免费节点订阅分享">乍得VPN | 2月21日22.4M/S|免费V2ray/Clash/SSR/Shadowrocket免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-61835.htm" title="动物疫苗的了解和认识论文 动物疫苗的了解和认识论文怎么写">动物疫苗的了解和认识论文 动物疫苗的了解和认识论文怎么写</a></li>
+                        <li class="py-2"><a href="/news/article-61239.htm" title="antDesign eggjs资源上传，并基于md5进行资源是否重复校验">antDesign eggjs资源上传，并基于md5进行资源是否重复校验</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">12</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section><!-- End About Us Section -->
+    </main><!-- End #main -->
+        <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container footer-bottom clearfix">
+            <div class="copyright">
+                    <p>
+                        <a href="/">首页</a> | 
+                        <a href="/free-node/">免费节点</a> | 
+                        <a href="/news/">新闻资讯</a> |
+                        <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                <a href="/">乍得VPN 机场订阅节点官网</a> 版权所有 Powered by WordPress
+            </div>
+            <div class="credits"></div>
+        </div>
+    </footer><!-- End Footer -->
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Vendor JS Files -->
+    <script src="/assets/website/js/frontend/v2rayc/jquery-2.1.0.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/aos/aos.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/glightbox/js/glightbox.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/php-email-form/validate.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/waypoints/noframework.waypoints.js"></script>
+    <!-- Template Main JS File -->
+    <script src="/assets/website/js/frontend/v2rayc/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+
+</body>
+
+</html>
