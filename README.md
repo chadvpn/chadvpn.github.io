@@ -1,4 +1,4 @@
-# 乍得VPN | 2月26日18.8M/S|免费Clash/SSR/V2ray/Shadowrocket免费节点订阅分享  更新时间 2025-02-26 08:53:39
+# 乍得VPN | 2月27日22.9M/S|免费Clash/Shadowrocket/V2ray/SSR免费节点订阅分享  更新时间 2025-02-27 06:15:03
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://chadvpn.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### Clash订阅链接
 
-- https://chadvpn.github.io/uploads/2025/02/0-20250226.yaml
-- https://chadvpn.github.io/uploads/2025/02/1-20250226.yaml
-- https://chadvpn.github.io/uploads/2025/02/2-20250226.yaml
-- https://chadvpn.github.io/uploads/2025/02/3-20250226.yaml
-- https://chadvpn.github.io/uploads/2025/02/4-20250226.yaml
+- https://chadvpn.github.io/uploads/2025/02/0-20250227.yaml
+- https://chadvpn.github.io/uploads/2025/02/1-20250227.yaml
+- https://chadvpn.github.io/uploads/2025/02/2-20250227.yaml
+- https://chadvpn.github.io/uploads/2025/02/3-20250227.yaml
+- https://chadvpn.github.io/uploads/2025/02/4-20250227.yaml
 
 ### V2ray订阅链接
 
-- https://chadvpn.github.io/uploads/2025/02/0-20250226.txt
-- https://chadvpn.github.io/uploads/2025/02/1-20250226.txt
-- https://chadvpn.github.io/uploads/2025/02/2-20250226.txt
-- https://chadvpn.github.io/uploads/2025/02/3-20250226.txt
-- https://chadvpn.github.io/uploads/2025/02/4-20250226.txt
+- https://chadvpn.github.io/uploads/2025/02/0-20250227.txt
+- https://chadvpn.github.io/uploads/2025/02/1-20250227.txt
+- https://chadvpn.github.io/uploads/2025/02/2-20250227.txt
+- https://chadvpn.github.io/uploads/2025/02/3-20250227.txt
+- https://chadvpn.github.io/uploads/2025/02/4-20250227.txt
 
 ### Sing-box订阅链接
 
-- https://chadvpn.github.io/uploads/2025/02/20250226.json
+- https://chadvpn.github.io/uploads/2025/02/20250227.json
 
 ## 更多clash节点订阅 ：
 
