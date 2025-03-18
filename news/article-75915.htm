@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://chadvpn.github.io/news/article-75915.htm" />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>uniapp中封装一个弹框组件</title>
+        <meta name="description" content="1，准备组件popup // components文件夹中popup组件&lt;template&gt;&lt;view&gt;&lt;viewclass="show-box-bg wx-login-" />
+        <link rel="icon" href="/assets/website/img/v2rayc/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="乍得VPN 机场订阅节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://chadvpn.github.io/news/article-75915.htm" />
+    <meta property="og:site_name" content="乍得VPN 机场订阅节点官网" />
+    <meta property="og:title" content="uniapp中封装一个弹框组件" />
+    <meta property="og:image" content="https://chadvpn.github.io/uploads/20241122/bda43cc29865cbd146572f538ae189a8.webp" />
+        <meta property="og:release_date" content="2025-03-17T09:41:48" />
+    <meta property="og:updated_time" content="2025-03-17T09:41:48" />
+        <meta property="og:description" content="1，准备组件popup // components文件夹中popup组件&lt;template&gt;&lt;view&gt;&lt;viewclass="show-box-bg wx-login-" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="uniapp中封装一个弹框组件">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="/assets/website/js/frontend/v2rayc/aos/aos.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/remixicon/remixicon.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="/assets/website/css/v2rayc/style.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8ZCRTLDBJK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8ZCRTLDBJK');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top header-inner-pages">
+        <div class="container d-flex align-items-center">
+            <a href="/">
+                            <span class="logo me-auto">乍得VPN</span>
+                        </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                                        <li><a class="nav-link" href="/">首页</a></li>
+                                        <li><a class="nav-link" href="/free-nodes/">免费节点</a></li>
+                                        <li><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                        <li><a class="nav-link" href="/client.htm">客户端</a></li>
+                                    </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+        </div>
+    </header><!-- End Header -->
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><a href="/">首页</a></li>
+                    <li><a href="/news/">新闻资讯</a></li>
+                    <li>正文</li>
+                </ol>
+                <h1>uniapp中封装一个弹框组件</h1>
+            </div>
+        </section><!-- End Breadcrumbs -->
+        <!-- ======= About Us Section ======= -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <h2><a id="1popup_0" rel="nofollow"></a>1，准备组件popup</h2> <pre><code class="prism language-javascript"><span class="token comment">// components文件夹中popup组件</span><span class="token operator">&lt;</span>template<span class="token operator">&gt;</span><span class="token operator">&lt;</span>view<span class="token operator">&gt;</span><span class="token operator">&lt;</span>view<span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"show-box-bg wx-login-box"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>view<span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"conten"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>view<span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"titl"</span><span class="token operator">&gt;</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">{<!-- --></span> popupMsg<span class="token punctuation">.</span>title<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>view<span class="token operator">&gt;</span><span class="token operator">&lt;</span>view<span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"text"</span><span class="token operator">&gt;</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">{<!-- --></span> popupMsg<span class="token punctuation">.</span>content<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>view<span class="token operator">&gt;</span><span class="token operator">&lt;</span>view<span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"btn-box"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>view<span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"cancel"</span> @click<span class="token operator">=</span><span class="token string">'hidePopup("no")'</span><span class="token operator">&gt;</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">{<!-- --></span> popupMsg<span class="token punctuation">.</span>cancel<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>view<span class="token operator">&gt;</span><span class="token operator">&lt;</span>view<span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"confirm"</span> @click<span class="token operator">=</span><span class="token string">'hidePopup("yes")'</span><span class="token operator">&gt;</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">{<!-- --></span> popupMsg<span class="token punctuation">.</span>confirm<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>view<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>view<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>view<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>view<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>view<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span><span class="token operator">&lt;</span>script<span class="token operator">&gt;</span><span class="token keyword">export</span><span class="token keyword">default</span><span class="token punctuation">{<!-- --></span><span class="token comment">//(1)子组件中，通过props接收到数据</span> 		props<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'popupMsg'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">return</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">,</span> 		methods<span class="token punctuation">:</span><span class="token punctuation">{<!-- --></span> 			hidePopup<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token comment">//子组件中，使用$emit调用父组件自定义事件，还可以传参</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$emit</span><span class="token punctuation">(</span><span class="token string">'handlePopup'</span><span class="token punctuation">,</span> type<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span class="token operator">&lt;</span>style scoped lang<span class="token operator">=</span><span class="token string">"scss"</span><span class="token operator">&gt;</span><span class="token punctuation">.</span>wx<span class="token operator">-</span>login<span class="token operator">-</span>box<span class="token punctuation">{<!-- --></span> 		width<span class="token punctuation">:</span><span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">;</span> 		position<span class="token punctuation">:</span> fixed<span class="token punctuation">;</span> 		top<span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">;</span> 		left<span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">;</span> 		height<span class="token punctuation">:</span><span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">;</span> 		background<span class="token operator">-</span>color<span class="token punctuation">:</span><span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0.5</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 		z<span class="token operator">-</span>index<span class="token punctuation">:</span><span class="token number">88</span><span class="token punctuation">;</span><span class="token punctuation">.</span>conten<span class="token punctuation">{<!-- --></span> 			width<span class="token punctuation">:</span><span class="token number">78</span><span class="token operator">%</span><span class="token punctuation">;</span> 			background<span class="token operator">-</span>color<span class="token punctuation">:</span> #fff<span class="token punctuation">;</span> 			z<span class="token operator">-</span>index<span class="token punctuation">:</span><span class="token number">99</span><span class="token punctuation">;</span> 			position<span class="token punctuation">:</span> absolute<span class="token punctuation">;</span> 			top<span class="token punctuation">:</span><span class="token number">50</span><span class="token operator">%</span><span class="token punctuation">;</span> 			left<span class="token punctuation">:</span><span class="token number">50</span><span class="token operator">%</span><span class="token punctuation">;</span> 			transform<span class="token punctuation">:</span><span class="token function">translate</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">50</span><span class="token operator">%</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">50</span><span class="token operator">%</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 			border<span class="token operator">-</span>radius<span class="token punctuation">:</span><span class="token number">14</span>upx<span class="token punctuation">;</span> 			overflow<span class="token punctuation">:</span> hidden<span class="token punctuation">;</span><span class="token punctuation">.</span>titl<span class="token punctuation">{<!-- --></span> 				width<span class="token punctuation">:</span><span class="token number">90</span><span class="token operator">%</span><span class="token punctuation">;</span> 				height<span class="token punctuation">:</span><span class="token number">110</span>rpx<span class="token punctuation">;</span> 				font<span class="token operator">-</span>size<span class="token punctuation">:</span><span class="token number">40</span>rpx<span class="token punctuation">;</span> 				padding<span class="token punctuation">:</span><span class="token number">0</span><span class="token number">5</span><span class="token operator">%</span><span class="token punctuation">;</span> 				line<span class="token operator">-</span>height<span class="token punctuation">:</span><span class="token number">140</span>rpx<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">.</span>text<span class="token punctuation">{<!-- --></span> 				width<span class="token punctuation">:</span><span class="token number">90</span><span class="token operator">%</span><span class="token punctuation">;</span> 				font<span class="token operator">-</span>size<span class="token punctuation">:</span><span class="token number">28</span>rpx<span class="token punctuation">;</span> 				padding<span class="token punctuation">:</span><span class="token number">0</span><span class="token number">5</span><span class="token operator">%</span><span class="token punctuation">;</span> 				margin<span class="token operator">-</span>bottom<span class="token punctuation">:</span><span class="token number">40</span>rpx<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">.</span>memberY<span class="token punctuation">{<!-- --></span> 				width<span class="token punctuation">:</span><span class="token number">90</span><span class="token operator">%</span><span class="token punctuation">;</span> 				font<span class="token operator">-</span>size<span class="token punctuation">:</span><span class="token number">28</span>rpx<span class="token punctuation">;</span> 				color<span class="token punctuation">:</span> #<span class="token constant">FFCC00</span><span class="token punctuation">;</span> 				padding<span class="token punctuation">:</span><span class="token number">0</span><span class="token number">5</span><span class="token operator">%</span><span class="token punctuation">;</span> 				text<span class="token operator">-</span>align<span class="token punctuation">:</span> center<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">.</span>memberB<span class="token punctuation">{<!-- --></span> 				width<span class="token punctuation">:</span><span class="token number">90</span><span class="token operator">%</span><span class="token punctuation">;</span> 				font<span class="token operator">-</span>size<span class="token punctuation">:</span><span class="token number">28</span>rpx<span class="token punctuation">;</span> 				color<span class="token punctuation">:</span> #<span class="token number">007</span>AFF<span class="token punctuation">;</span> 				padding<span class="token punctuation">:</span><span class="token number">0</span><span class="token number">5</span><span class="token operator">%</span><span class="token punctuation">;</span> 				text<span class="token operator">-</span>align<span class="token punctuation">:</span> center<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">.</span>btn<span class="token operator">-</span>box<span class="token punctuation">{<!-- --></span> 				width<span class="token punctuation">:</span><span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">;</span> 				height<span class="token punctuation">:</span><span class="token number">90</span>rpx<span class="token punctuation">;</span> 				display<span class="token punctuation">:</span> flex<span class="token punctuation">;</span> 				border<span class="token operator">-</span>top<span class="token punctuation">:</span><span class="token number">2</span>rpx solid #<span class="token number">969696</span><span class="token punctuation">;</span><span class="token punctuation">.</span>cancel<span class="token punctuation">{<!-- --></span> 					width<span class="token punctuation">:</span><span class="token number">50</span><span class="token operator">%</span><span class="token punctuation">;</span> 					height<span class="token punctuation">:</span><span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">;</span> 					font<span class="token operator">-</span>size<span class="token punctuation">:</span><span class="token number">40</span>rpx<span class="token punctuation">;</span> 					color<span class="token punctuation">:</span> #<span class="token number">999</span><span class="token punctuation">;</span> 					text<span class="token operator">-</span>align<span class="token punctuation">:</span> center<span class="token punctuation">;</span> 					line<span class="token operator">-</span>height<span class="token punctuation">:</span><span class="token number">89</span>rpx<span class="token punctuation">;</span> 					border<span class="token operator">-</span>right<span class="token punctuation">:</span><span class="token number">2</span>rpx solid #<span class="token number">969696</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">.</span>confirm<span class="token punctuation">{<!-- --></span> 					width<span class="token punctuation">:</span><span class="token number">50</span><span class="token operator">%</span><span class="token punctuation">;</span> 					height<span class="token punctuation">:</span><span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">;</span> 					font<span class="token operator">-</span>size<span class="token punctuation">:</span><span class="token number">40</span>rpx<span class="token punctuation">;</span> 					color<span class="token punctuation">:</span> #ffcc00<span class="token punctuation">;</span> 					text<span class="token operator">-</span>align<span class="token punctuation">:</span> center<span class="token punctuation">;</span> 					line<span class="token operator">-</span>height<span class="token punctuation">:</span><span class="token number">99</span>rpx<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">&gt;</span></code></pre> <h2><a id="2_119" rel="nofollow"></a>2，使用组件</h2> <pre><code class="prism language-javascript"><span class="token comment">// An highlighted block</span><span class="token operator">&lt;</span>template<span class="token operator">&gt;</span><span class="token operator">&lt;</span>view<span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"content"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>button type<span class="token operator">=</span><span class="token string">'primary'</span> @click<span class="token operator">=</span><span class="token string">'showPopup=true'</span><span class="token operator">&gt;</span>点击弹框<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>使用<span class="token operator">--</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>popup<span class="token punctuation">:</span>popupMsg<span class="token operator">=</span><span class="token string">"popupMsg"</span>  		@handlePopup<span class="token operator">=</span><span class="token string">'handleShowOrHidePopup'</span> 		v<span class="token operator">-</span>show<span class="token operator">=</span><span class="token string">"showPopup"</span><span class="token operator">/</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>view<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span><span class="token operator">&lt;</span>script<span class="token operator">&gt;</span><span class="token comment">//(1)引入</span><span class="token keyword">import</span> popup<span class="token keyword">from</span><span class="token string">'@/components/popup.vue'</span><span class="token punctuation">;</span><span class="token keyword">export</span><span class="token keyword">default</span><span class="token punctuation">{<!-- --></span><span class="token comment">//(2)挂载</span> 		components<span class="token punctuation">:</span><span class="token punctuation">{<!-- --></span>popup<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">return</span><span class="token punctuation">{<!-- --></span> 				showPopup<span class="token punctuation">:</span><span class="token boolean">false</span><span class="token punctuation">,</span> 				popupMsg<span class="token punctuation">:</span><span class="token punctuation">{<!-- --></span> 					title<span class="token punctuation">:</span><span class="token string">'这是标题'</span><span class="token punctuation">,</span> 					content<span class="token punctuation">:</span><span class="token string">'这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容'</span><span class="token punctuation">,</span> 					cancel<span class="token punctuation">:</span><span class="token string">'取消'</span><span class="token punctuation">,</span> 					confirm<span class="token punctuation">:</span><span class="token string">'确定'</span><span class="token punctuation">}</span><span class="token punctuation">,</span> 				hotgoods<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token punctuation">{<!-- --></span>id<span class="token punctuation">:</span><span class="token string">'01'</span><span class="token punctuation">,</span>title<span class="token punctuation">:</span><span class="token string">'标题一'</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{<!-- --></span>id<span class="token punctuation">:</span><span class="token string">'02'</span><span class="token punctuation">,</span>title<span class="token punctuation">:</span><span class="token string">'标题二'</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">,</span> 		methods<span class="token punctuation">:</span><span class="token punctuation">{<!-- --></span> 			handleShowOrHidePopup<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">if</span><span class="token punctuation">(</span>type<span class="token operator">==</span><span class="token string">'yes'</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span> 					console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span><span class="token keyword">this</span><span class="token punctuation">.</span>showPopup<span class="token operator">=</span><span class="token boolean">false</span><span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{<!-- --></span> 					console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span><span class="token keyword">this</span><span class="token punctuation">.</span>showPopup<span class="token operator">=</span><span class="token boolean">false</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span></code></pre> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-75238.htm">宠物粮食加工厂设备生产厂家电话号码查询（宠物粮食加工厂设备生产厂家电话号码查询）</a></p>
+                                        <p>下一个：<a href="/news/article-75916.htm">领养合同范本模板（领养协议怎么签）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-71223.htm" title="宠物粮食加工厂加盟条件要求高吗知乎（宠物粮食加工设备）">宠物粮食加工厂加盟条件要求高吗知乎（宠物粮食加工设备）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-13-free-node-subscribe.htm" title="乍得VPN | 3月13日20.4M/S|免费SSR/Shadowrocket/V2ray/Clash免费节点订阅分享">乍得VPN | 3月13日20.4M/S|免费SSR/Shadowrocket/V2ray/Clash免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-4-clash-v2ray-ss-ssr.htm" title="乍得VPN | 3月4日22.4M/S|免费SSR/Shadowrocket/Clash/V2ray免费节点订阅分享">乍得VPN | 3月4日22.4M/S|免费SSR/Shadowrocket/Clash/V2ray免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-24-node-share-links.htm" title="乍得VPN | 2月24日18.1M/S|免费Clash/SSR/Shadowrocket/V2ray免费节点订阅分享">乍得VPN | 2月24日18.1M/S|免费Clash/SSR/Shadowrocket/V2ray免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-25-free-v2ray.htm" title="乍得VPN | 2月25日18.9M/S|免费SSR/Clash/V2ray/Shadowrocket免费节点订阅分享">乍得VPN | 2月25日18.9M/S|免费SSR/Clash/V2ray/Shadowrocket免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-69913.htm" title="经常养猫的人容易得什么病（养猫会不会对身体不好）">经常养猫的人容易得什么病（养猫会不会对身体不好）</a></li>
+                        <li class="py-2"><a href="/news/article-73881.htm" title="flink内存模型详解与案例">flink内存模型详解与案例</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-26-node-share-links.htm" title="乍得VPN | 2月26日22.4M/S|免费V2ray/Shadowrocket/Clash/SSR免费节点订阅分享">乍得VPN | 2月26日22.4M/S|免费V2ray/Shadowrocket/Clash/SSR免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-65474.htm" title="layUI利用JQuery设置select下拉列表的值重新渲染">layUI利用JQuery设置select下拉列表的值重新渲染</a></li>
+                        <li class="py-2"><a href="/news/article-63033.htm" title="佳雯宠物医院客服电话是多少号（佳雯宠物医院客服电话是多少号码）">佳雯宠物医院客服电话是多少号（佳雯宠物医院客服电话是多少号码）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">54</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section><!-- End About Us Section -->
+    </main><!-- End #main -->
+        <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container footer-bottom clearfix">
+            <div class="copyright">
+                    <p>
+                        <a href="/">首页</a> | 
+                        <a href="/free-node/">免费节点</a> | 
+                        <a href="/news/">新闻资讯</a> |
+                        <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                <a href="/">乍得VPN 机场订阅节点官网</a> 版权所有 Powered by WordPress
+            </div>
+            <div class="credits"></div>
+        </div>
+    </footer><!-- End Footer -->
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Vendor JS Files -->
+    <script src="/assets/website/js/frontend/v2rayc/jquery-2.1.0.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/aos/aos.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/glightbox/js/glightbox.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/php-email-form/validate.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/waypoints/noframework.waypoints.js"></script>
+    <!-- Template Main JS File -->
+    <script src="/assets/website/js/frontend/v2rayc/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+
+</body>
+
+</html>
