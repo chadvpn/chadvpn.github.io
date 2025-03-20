@@ -101,6 +101,7 @@
                   				  				  				<div id="content_views" class="htmledit_views"> <p>字符串左旋<br /> 题目内容：<br /> 实现一个函数，可以左旋字符串中的k个字符。</p> <p>例如：<br /> ABCD左旋一个字符得到BCDA<br /> ABCD左旋两个字符得到CDAB</p> <p>&nbsp;第一种方法：在每一次的字符旋转中将后续的字符进行往前缩进的操作。即从前往后遍历每一个待旋转的字符，将当前字符后续的所有字符往前缩进一个位置，缩进完毕则把当前的字符填充至字符串的尾部。</p> <pre><code>void string_left_rotate(char* arr, int k) { 	int i = 0; 	int len = strlen(arr); 	 	for (i = 0; i &lt; k; i++) 	{ 		int j = 0; 		char tmp = *arr; 		 		for (j = 0; j &lt; len - 1; j++) 		{ 			*(arr + j) = *(arr + j + 1); 		} 		 		*(arr + len - 1) = tmp; 	} }  int main() { 	char arr[] = "abcdef"; 	int k = 0; 	printf("%s\n", arr); 	scanf("%d", &amp;k); 	string_left_rotate(arr, k); 	printf("%s\n", arr); 	return 0; } </code></pre> <h3></h3> <p>第二种方法：三步翻转法</p> <p>将一个字符串分成X和Y两个部分，在每部分字符串上定义反转操作，如X^T，即把X的所有字符反转（如，X="abc"，那么X^T="cba"），那么就得到下面的结论：(X^TY^T)^T=YX，显然就解决了字符串的反转问题。</p> <p>例如，字符串 abcdef ，若要让def翻转到abc的前头，只要按照下述3个步骤操作即可：</p> <ol> <li>首先将原字符串分为两个部分，即X:abc，Y:def；</li> <li>将X反转，X-&gt;X^T，即得：abc-&gt;cba；将Y反转，Y-&gt;Y^T，即得：def-&gt;fed。</li> <li>反转上述步骤得到的结果字符串X^TY^T，即反转字符串cbafed的两部分（cba和fed）给予反转，cbafed得到defabc，形式化表示为(X^TY^T)^T=YX，这就实现了整个反转。</li> </ol> <pre><code>void reverse(char* left, char* right) { 	while (left &lt; right) 	{ 		char tmp = *left; 		*left = *right; 		*right = tmp; 		left++; 		right--; 	} }  void string_left_rotate(char* arr, int k) { 	reverse(arr, arr + k - 1); 	reverse(arr + k, arr + strlen(arr) - 1); 	reverse(arr, arr + strlen(arr) - 1); }  int main() { 	char arr[] = "abcdef"; 	int k = 0; 	printf("%s\n", arr); 	scanf("%d", &amp;k); 	string_left_rotate(arr, k); 	printf("%s\n", arr); 	return 0; }</code></pre> </p></div> 			                <div class="clearfix"></div>
                 <div class="col-md-12 mt-5">
                                         <p>上一个：<a href="/news/article-76589.htm">xpath的使用</a></p>
+                                        <p>下一个：<a href="/news/article-77269.htm">动物疫苗注射注意事项有哪些呢英语（动物疫苗注射注意事项有哪些呢英语作文）</a></p>
                                     </div>
                                     </div>
                     <div class="col-md-3">
@@ -110,16 +111,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2025-2-27-free-high-speed-nodes.htm" title="乍得VPN | 2月27日21.5M/S|免费V2ray/Clash/SSR/Shadowrocket免费节点订阅分享">乍得VPN | 2月27日21.5M/S|免费V2ray/Clash/SSR/Shadowrocket免费节点订阅分享</a></li>
-                        <li class="py-2"><a href="/news/article-68623.htm" title="动物疫苗研究进展论文（动物疫苗发展前景）">动物疫苗研究进展论文（动物疫苗发展前景）</a></li>
-                        <li class="py-2"><a href="/news/article-75915.htm" title="uniapp中封装一个弹框组件">uniapp中封装一个弹框组件</a></li>
+                        <li class="py-2"><a href="/news/article-75237.htm" title="树的同构（java实现）">树的同构（java实现）</a></li>
+                        <li class="py-2"><a href="/news/article-71889.htm" title="SpringBoot-日期格式化">SpringBoot-日期格式化</a></li>
+                        <li class="py-2"><a href="/news/article-72544.htm" title="同安流浪狗救助站位置（同安流浪狗救助站位置在哪）">同安流浪狗救助站位置（同安流浪狗救助站位置在哪）</a></li>
                         <li class="py-2"><a href="/news/article-72541.htm" title="延吉市宠物医院推荐（延吉市宠物狗）">延吉市宠物医院推荐（延吉市宠物狗）</a></li>
-                        <li class="py-2"><a href="/news/article-75916.htm" title="领养合同范本模板（领养协议怎么签）">领养合同范本模板（领养协议怎么签）</a></li>
-                        <li class="py-2"><a href="/news/article-76590.htm" title="c语言之字符串旋转">c语言之字符串旋转</a></li>
-                        <li class="py-2"><a href="/news/article-61240.htm" title="动物疫苗使用前的注意事项是什么呢（动物疫苗注射工作注意事项）">动物疫苗使用前的注意事项是什么呢（动物疫苗注射工作注意事项）</a></li>
-                        <li class="py-2"><a href="/news/article-60675.htm" title="springboot的定时任务">springboot的定时任务</a></li>
-                        <li class="py-2"><a href="/news/article-74557.htm" title="淘宝店铺转让交易平台可信吗（淘宝店铺转让会有什么后果吗）">淘宝店铺转让交易平台可信吗（淘宝店铺转让会有什么后果吗）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-3-6-free-v2ray-subscribe.htm" title="乍得VPN | 3月6日19.9M/S|免费SSR/Shadowrocket/Clash/V2ray免费节点订阅分享">乍得VPN | 3月6日19.9M/S|免费SSR/Shadowrocket/Clash/V2ray免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-67353.htm" title="广州宠物领养中心哪家好点 广州宠物领养中心哪家好点呢">广州宠物领养中心哪家好点 广州宠物领养中心哪家好点呢</a></li>
+                        <li class="py-2"><a href="/news/article-77952.htm" title="使用Spring Cloud Feign作为HTTP客户端调用远程HTTP服务">使用Spring Cloud Feign作为HTTP客户端调用远程HTTP服务</a></li>
+                        <li class="py-2"><a href="/news/article-62442.htm" title="vue使用canvas绘制圆环_vue.js_">vue使用canvas绘制圆环_vue.js_</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-13-free-node-subscribe.htm" title="乍得VPN | 3月13日20.4M/S|免费SSR/Shadowrocket/V2ray/Clash免费节点订阅分享">乍得VPN | 3月13日20.4M/S|免费SSR/Shadowrocket/V2ray/Clash免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-61835.htm" title="动物疫苗的了解和认识论文 动物疫苗的了解和认识论文怎么写">动物疫苗的了解和认识论文 动物疫苗的了解和认识论文怎么写</a></li>
+                        <li class="py-2"><a href="/news/article-66082.htm" title="兽医资格证自考需要什么条件证出租（自学兽医考证）">兽医资格证自考需要什么条件证出租（自学兽医考证）</a></li>
                     </ul>
     </div>
 </div>
@@ -131,7 +132,7 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">54</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+                <h4><span class="badge" style="float: right;">60</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">27</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>

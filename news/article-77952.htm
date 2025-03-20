@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://chadvpn.github.io/news/article-77952.htm" />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>使用Spring Cloud Feign作为HTTP客户端调用远程HTTP服务</title>
+        <meta name="description" content="在Spring Cloud Netflix栈中，各个微服务都是以HTTP接口的形式暴露自身服务的，因此在调用远程服务时就必须使用HTTP客户端。我们可以使用JDK原生的URLConnection、Ap" />
+        <link rel="icon" href="/assets/website/img/v2rayc/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="乍得VPN 机场订阅节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://chadvpn.github.io/news/article-77952.htm" />
+    <meta property="og:site_name" content="乍得VPN 机场订阅节点官网" />
+    <meta property="og:title" content="使用Spring Cloud Feign作为HTTP客户端调用远程HTTP服务" />
+    <meta property="og:image" content="https://chadvpn.github.io/uploads/20241122/e3758398715faa26534341c4d2cd7ba1.webp" />
+        <meta property="og:release_date" content="2025-03-20T10:02:57" />
+    <meta property="og:updated_time" content="2025-03-20T10:02:57" />
+        <meta property="og:description" content="在Spring Cloud Netflix栈中，各个微服务都是以HTTP接口的形式暴露自身服务的，因此在调用远程服务时就必须使用HTTP客户端。我们可以使用JDK原生的URLConnection、Ap" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="使用Spring Cloud Feign作为HTTP客户端调用远程HTTP服务">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="/assets/website/js/frontend/v2rayc/aos/aos.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/remixicon/remixicon.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="/assets/website/css/v2rayc/style.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8ZCRTLDBJK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8ZCRTLDBJK');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top header-inner-pages">
+        <div class="container d-flex align-items-center">
+            <a href="/">
+                            <span class="logo me-auto">乍得VPN</span>
+                        </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                                        <li><a class="nav-link" href="/">首页</a></li>
+                                        <li><a class="nav-link" href="/free-nodes/">免费节点</a></li>
+                                        <li><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                        <li><a class="nav-link" href="/client.htm">客户端</a></li>
+                                    </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+        </div>
+    </header><!-- End Header -->
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><a href="/">首页</a></li>
+                    <li><a href="/news/">新闻资讯</a></li>
+                    <li>正文</li>
+                </ol>
+                <h1>使用Spring Cloud Feign作为HTTP客户端调用远程HTTP服务</h1>
+            </div>
+        </section><!-- End Breadcrumbs -->
+        <!-- ======= About Us Section ======= -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-light"> <p>在Spring Cloud Netflix栈中，各个微服务都是以HTTP接口的形式暴露自身服务的，因此在调用远程服务时就必须使用HTTP客户端。我们可以使用JDK原生的<code>URLConnection</code>、Apache的<code>Http Client</code>、Netty的异步HTTP Client, Spring的<code>RestTemplate</code>。但是，用起来最方便、最优雅的还是要属Feign了。</p> </h1> <p>Feign是一种声明式、模板化的HTTP客户端。在Spring Cloud中使用Feign, 我们可以做到使用HTTP请求远程服务时能与调用本地方法一样的编码体验，开发者完全感知不到这是远程方法，更感知不到这是个HTTP请求。比如：</p> <pre class="prettyprint"><code class="language-java hljs"><span class="hljs-annotation">@Autowired</span><span class="hljs-keyword">private</span> AdvertGropRemoteService service;<span class="hljs-comment">// 远程服务</span><span class="hljs-keyword">public</span> AdvertGroupVO<span class="hljs-title">foo</span>(Integer groupId) {<span class="hljs-keyword">return</span> service.findByGroupId(groupId);<span class="hljs-comment">// 通过HTTP调用远程服务</span> }</code></pre> <p>开发者通过<code>service.findByGroupId()</code>就能完成发送HTTP请求和解码HTTP返回结果并封装成对象的过程。</p> </h1> <p>为了让Feign知道在调用方法时应该向哪个地址发请求以及请求需要带哪些参数，我们需要定义一个接口：</p> <pre class="prettyprint"><code class="hljs java"><span class="hljs-annotation">@FeignClient</span>(name =<span class="hljs-string">"ea"</span>)<span class="hljs-comment">//  [A]</span><span class="hljs-keyword">public</span><span class="hljs-class"><span class="hljs-keyword">interface</span><span class="hljs-title">AdvertGroupRemoteService</span> {<!-- --></span><span class="hljs-annotation">@RequestMapping</span>(value =<span class="hljs-string">"/group/{groupId}"</span>, method = RequestMethod.GET)<span class="hljs-comment">// [B]</span>     AdvertGroupVO findByGroupId(<span class="hljs-annotation">@PathVariable</span>(<span class="hljs-string">"groupId"</span>) Integer adGroupId)<span class="hljs-comment">// [C]</span><span class="hljs-annotation">@RequestMapping</span>(value =<span class="hljs-string">"/group/{groupId}"</span>, method = RequestMethod.PUT)<span class="hljs-keyword">void</span> update(<span class="hljs-annotation">@PathVariable</span>(<span class="hljs-string">"groupId"</span>) Integer groupId,<span class="hljs-annotation">@RequestParam</span>(<span class="hljs-string">"groupName"</span>) String groupName)</code></pre> <p>A:<code>@FeignClient</code>用于通知Feign组件对该接口进行代理(不需要编写接口实现)，使用者可直接通过<code>@Autowired</code>注入。</p> <p>B:<code>@RequestMapping</code>表示在调用该方法时需要向<code>/group/{groupId}</code>发送<code>GET</code>请求。</p> <p>C:<code>@PathVariable</code>与<code>SpringMVC</code>中对应注解含义相同。</p> <p>Spring Cloud应用在启动时，Feign会扫描标有<code>@FeignClient</code>注解的接口，生成代理，并注册到Spring容器中。生成代理时Feign会为每个接口方法创建一个<code>RequetTemplate</code>对象，该对象封装了HTTP请求需要的全部信息，请求参数名、请求方法等信息都是在这个过程中确定的，Feign的模板化就体现在这里。</p> <p>在本例中，我们将Feign与Eureka和Ribbon组合使用，<code>@FeignClient(name = "ea")</code>意为通知Feign在调用该接口方法时要向Eureka中查询名为<code>ea</code>的服务，从而得到服务URL。</p> </h1> <p>Feign将方法签名中方法参数对象序列化为请求参数放到HTTP请求中的过程，是由编码器(Encoder)完成的。同理，将HTTP响应数据反序列化为java对象是由解码器(Decoder)完成的。</p> <p>默认情况下，Feign会将标有<code>@RequestParam</code>注解的参数转换成字符串添加到URL中，将没有注解的参数通过Jackson转换成json放到请求体中。注意，如果在<code>@RequetMapping</code>中的<code>method</code>将请求方式指定为<code>POST</code>，那么所有未标注解的参数将会被忽略，例如：</p> <pre class="prettyprint"><code class="hljs css"><span class="hljs-at_rule">@<span class="hljs-keyword">RequestMapping(value</span> =<span class="hljs-string">"/group/{groupId}"</span>, method = RequestMethod.GET) void<span class="hljs-function">update(@<span class="hljs-function">PathVariable(<span class="hljs-string">"groupId"</span>)</span> Integer groupId, @<span class="hljs-function">RequestParam(<span class="hljs-string">"groupName"</span>)</span> String groupName, DataObject obj)</span></span>;</code></pre> <p>此时因为声明的是GET请求没有请求体，所以<code>obj</code>参数就会被忽略。</p> <p>在Spring Cloud环境下，Feign的Encoder*只会用来编码没有添加注解的参数*。如果你自定义了Encoder, 那么只有在编码<code>obj</code>参数时才会调用你的Encoder。对于Decoder, 默认会委托给SpringMVC中的<code>MappingJackson2HttpMessageConverter</code>类进行解码。只有当状态码不在200 ~ 300之间时ErrorDecoder才会被调用。ErrorDecoder的作用是可以根据HTTP响应信息返回一个异常，该异常可以在调用Feign接口的地方被捕获到。我们目前就通过ErrorDecoder来使Feign接口抛出业务异常以供调用者处理。</p> </h1> <p>Feign在默认情况下使用的是JDK原生的<code>URLConnection</code>发送HTTP请求，没有连接池，但是对每个地址会保持一个长连接，即利用HTTP的<code>persistence connection</code> 。我们可以用Apache的HTTP Client替换Feign原始的http client, 从而获取连接池、超时时间等与性能息息相关的控制能力。Spring Cloud从<code>Brixtion.SR5</code>版本开始支持这种替换，首先在项目中声明Apache HTTP Client和<code>feign-httpclient</code>依赖：</p> <pre class="prettyprint"><code class="hljs xml"><span class="hljs-comment">&lt;!-- 使用Apache HttpClient替换Feign原生httpclient --&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>org.apache.httpcomponents<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>httpclient<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>com.netflix.feign<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>feign-httpclient<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>${feign-httpclient}<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span></code></pre> <p>然后在<code>application.properties</code>中添加：</p> <pre class="prettyprint"><code class="hljs avrasm">feign<span class="hljs-preprocessor">.httpclient</span><span class="hljs-preprocessor">.enabled</span>=true</code></pre> </h1> <p>通过Feign， 我们能把HTTP远程调用对开发者完全透明，得到与调用本地方法一致的编码体验。这一点与阿里Dubbo中暴露远程服务的方式类似，区别在于Dubbo是基于私有二进制协议，而Feign本质上还是个HTTP客户端。如果是在用Spring Cloud Netflix搭建微服务，那么Feign无疑是最佳选择。</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-77270.htm">宠物领养app的商业模式（领养宠物app的项目策划书）</a></p>
+                                        <p>下一个：<a href="/news/article-77953.htm">动物疫苗注射工作注意事项（动物疫苗注射方法）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-71890.htm" title="动物疫苗概念股龙头 动物疫苗概念股龙头股">动物疫苗概念股龙头 动物疫苗概念股龙头股</a></li>
+                        <li class="py-2"><a href="/news/article-64246.htm" title="Zookeeper——客户端API的相关方法操作">Zookeeper——客户端API的相关方法操作</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-19-free-subscribe-node.htm" title="乍得VPN | 3月19日22.4M/S|免费V2ray/Shadowrocket/SSR/Clash免费节点订阅分享">乍得VPN | 3月19日22.4M/S|免费V2ray/Shadowrocket/SSR/Clash免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-66717.htm" title="动物医院好评模板范文大全图片（动物医院美团好评）">动物医院好评模板范文大全图片（动物医院美团好评）</a></li>
+                        <li class="py-2"><a href="/news/article-72541.htm" title="延吉市宠物医院推荐（延吉市宠物狗）">延吉市宠物医院推荐（延吉市宠物狗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-24-node-share-links.htm" title="乍得VPN | 2月24日18.1M/S|免费Clash/SSR/Shadowrocket/V2ray免费节点订阅分享">乍得VPN | 2月24日18.1M/S|免费Clash/SSR/Shadowrocket/V2ray免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-73881.htm" title="flink内存模型详解与案例">flink内存模型详解与案例</a></li>
+                        <li class="py-2"><a href="/news/article-73880.htm" title="Javascript 实现二维码生成">Javascript 实现二维码生成</a></li>
+                        <li class="py-2"><a href="/news/article-66083.htm" title="动物医院有公立的吗知乎推荐（动物医院有限公司）">动物医院有公立的吗知乎推荐（动物医院有限公司）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-3-free-subscribe-node.htm" title="乍得VPN | 3月3日22.2M/S|免费Shadowrocket/Clash/V2ray/SSR免费节点订阅分享">乍得VPN | 3月3日22.2M/S|免费Shadowrocket/Clash/V2ray/SSR免费节点订阅分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">60</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section><!-- End About Us Section -->
+    </main><!-- End #main -->
+        <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container footer-bottom clearfix">
+            <div class="copyright">
+                    <p>
+                        <a href="/">首页</a> | 
+                        <a href="/free-node/">免费节点</a> | 
+                        <a href="/news/">新闻资讯</a> |
+                        <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                <a href="/">乍得VPN 机场订阅节点官网</a> 版权所有 Powered by WordPress
+            </div>
+            <div class="credits"></div>
+        </div>
+    </footer><!-- End Footer -->
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Vendor JS Files -->
+    <script src="/assets/website/js/frontend/v2rayc/jquery-2.1.0.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/aos/aos.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/glightbox/js/glightbox.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/php-email-form/validate.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/waypoints/noframework.waypoints.js"></script>
+    <!-- Template Main JS File -->
+    <script src="/assets/website/js/frontend/v2rayc/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+
+</body>
+
+</html>
