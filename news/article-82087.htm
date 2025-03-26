@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://chadvpn.github.io/news/article-82087.htm" />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Kafka 单机（集群）安装部署（自带zookeeper）</title>
+        <meta name="description" content="背景： kafka官网：http://kafka.apache.org/ kafka下载页面：http://kafka.apache.org/downloads kafka配置快速入门：http://" />
+        <link rel="icon" href="/assets/website/img/v2rayc/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="乍得VPN 机场订阅节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://chadvpn.github.io/news/article-82087.htm" />
+    <meta property="og:site_name" content="乍得VPN 机场订阅节点官网" />
+    <meta property="og:title" content="Kafka 单机（集群）安装部署（自带zookeeper）" />
+    <meta property="og:image" content="https://chadvpn.github.io/uploads/20241122/da173c2ea0bdb40e3f8c5205c7038d42.webp" />
+        <meta property="og:release_date" content="2025-03-26T08:58:52" />
+    <meta property="og:updated_time" content="2025-03-26T08:58:52" />
+        <meta property="og:description" content="背景： kafka官网：http://kafka.apache.org/ kafka下载页面：http://kafka.apache.org/downloads kafka配置快速入门：http://" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Kafka 单机（集群）安装部署（自带zookeeper）">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="/assets/website/js/frontend/v2rayc/aos/aos.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/remixicon/remixicon.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="/assets/website/css/v2rayc/style.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8ZCRTLDBJK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8ZCRTLDBJK');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top header-inner-pages">
+        <div class="container d-flex align-items-center">
+            <a href="/">
+                            <span class="logo me-auto">乍得VPN</span>
+                        </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                                        <li><a class="nav-link" href="/">首页</a></li>
+                                        <li><a class="nav-link" href="/free-nodes/">免费节点</a></li>
+                                        <li><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                        <li><a class="nav-link" href="/client.htm">客户端</a></li>
+                                    </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+        </div>
+    </header><!-- End Header -->
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><a href="/">首页</a></li>
+                    <li><a href="/news/">新闻资讯</a></li>
+                    <li>正文</li>
+                </ol>
+                <h1>Kafka 单机（集群）安装部署（自带zookeeper）</h1>
+            </div>
+        </section><!-- End Breadcrumbs -->
+        <!-- ======= About Us Section ======= -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p>背景：<br /> kafka官网：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://link.jianshu.com/?t=http%3A%2F%2Fkafka.apache.org%2F"  title="http://kafka.apache.org/" rel="nofollow">http://kafka.apache.org/</a><br /> kafka下载页面：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://link.jianshu.com/?t=http%3A%2F%2Fkafka.apache.org%2Fdownloads"  title="http://kafka.apache.org/downloads" rel="nofollow">http://kafka.apache.org/downloads</a><br /> kafka配置快速入门：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://link.jianshu.com/?t=http%3A%2F%2Fkafka.apache.org%2Fquickstart"  title="http://kafka.apache.org/quickstart" rel="nofollow">http://kafka.apache.org/quickstart</a><br /> 新版本的kafka自带有zookeeper，本篇文章记录使用自带zookeeper搭建kafka集群。</p> <p>消息队列术语：</p> <p>•Kafka将消息以topic为单位进行归纳。<br /> •将向Kafka topic发布消息的程序成为producers.<br /> •将预订topics并消费消息的程序成为consumer.<br /> •Kafka以集群的方式运行，可以由一个或多个服务组成，每个服务叫做一个broker.<br /> producers通过网络将消息发送到Kafka集群，集群向消费者提供消息，如下图所示：</p> <p class="img-center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220823/0f2f20abdf5c57c71cbede2b256e3d89.jpg"></p> <p>客户端和服务端通过TCP协议通信。Kafka提供了Java客户端，并且对多种语言都提供了支持。</p> <p>3.1.0 稳定版本下载地址：</p> <p><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.apache.org/dyn/closer.cgi?path=/kafka/3.1.0/kafka_2.13-3.1.0.tgz"  title="https://www.apache.org/dyn/closer.cgi?path=/kafka/3.1.0/kafka_2.13-3.1.0.tgz" rel="nofollow">https://www.apache.org/dyn/closer.cgi?path=/kafka/3.1.0/kafka_2.13-3.1.0.tgz</a></p> <p>1、操作命令：</p> <p>cd /usr/local/</p> <p>tar -zxvf kafka_2.11-2.0.0.tgz&nbsp; //解压 tar 包</p> <p>rm -rf LICENSE NOTICE site-docs&nbsp; //删除 LICENSE、NOTICE 、site-docs</p> <p> 2、启动zookeeper</p> <p>cd bin/</p> <p>nohup ./zookeeper-server-start.sh ../config/zookeeper.properties&nbsp;&nbsp;&gt;&gt;/var/tmp/kafka/zk.log 2&gt;&amp;1 &amp;</p> <p>jps&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;//查看启动成功</p> <p><img fetchpriority="high" decoding="async" alt="" height="129" src="http://img.555519.xyz/uploads3/20220823/598fab12b456ab3debff5e1cc3eaeaf9.jpg"></p> <p>3、启动Kafka</p> <p>nohup ./kafka-server-start.sh ../config/server.properties &gt;&gt;/var/tmp/kafka/kafka.log 2&gt;&amp;1 &amp;</p> <p><img decoding="async" alt="" height="140" src="http://img.555519.xyz/uploads3/20220823/0da49a0ab34e71974c2522540fe6cf2e.jpg"></p> <p>&nbsp;4、停止Kafka 、zookeeper</p> <p>./kafka-server-stop.sh&nbsp; &nbsp;//先停kafka server</p> <p>./zookeeper-server-stop.sh&nbsp; //再停zookeeper</p> <p>5、Kafka 使用</p> <p>1）创建topic&nbsp; &nbsp;pushu</p> <p>./kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic pushu</p> <p><img decoding="async" alt="" height="204" src="http://img.555519.xyz/uploads3/20220823/3fadd7e0640ecff4bc8dcbab6a7999e4.jpg"></p> <p>2) 查询topic 是否OK</p> <p>./kafka-topics.sh --list --bootstrap-server localhost:9092</p> <p><img loading="lazy" decoding="async" alt="" height="54" src="http://img.555519.xyz/uploads3/20220823/9708d7dd9cc3773347afc8a859ea4dec.jpg"></p> <p>&nbsp;3）生产者</p> <p>&nbsp;./kafka-console-producer.sh --broker-list &nbsp;localhost:9092 &nbsp;--topic pushu</p> <p><img loading="lazy" decoding="async" alt="" height="231" src="http://img.555519.xyz/uploads3/20220823/65b878778a34f316bba2e0af8a2cf3dd.jpg"></p> <p>4）消费者</p> <p>./kafka-console-consumer.sh --bootstrap-server localhost:9092 &nbsp;--topic pushu</p> <p><img loading="lazy" decoding="async" alt="" height="266" src="http://img.555519.xyz/uploads3/20220823/6710c4fd00b5fdec4e03803b4a473643.jpg"></p> <p>&nbsp;单机方式已验证OK，可以大胆的通过Python，Java，等Client方式对接使用。</p> <p>6、集群方式</p> <p>1）其他机器 安装Kafka</p> <p>分别往192.168.10.66、192.168.10.88、192.168.10.99这三台虚拟机上安装kafka</p> <p>2）配置server.properties</p> <p>cd&nbsp;&nbsp;/data/software/kafka_2.13-3.1.0/config</p> <p>配置&nbsp;broker.id 每个机器独立的ID</p> <p><img loading="lazy" decoding="async" alt="" height="567" src="http://img.555519.xyz/uploads3/20220823/9dac185087c3244f970deb81dd676da0.jpg"></p> <p>配置zookeeper集群端口</p> <p><img loading="lazy" decoding="async" alt="" height="260" src="http://img.555519.xyz/uploads3/20220823/1c1d63c6af58e2798b7eef6ec6a84bff.jpg"></p> <p>&nbsp;&nbsp;3）集群配置完成，非常完美！</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-81405.htm">美容美甲化妆纹绣学校（美容美甲化妆纹绣学校那家好）</a></p>
+                                        <p>下一个：<a href="/news/article-82088.htm">【异常报错】com.rabbitmq.client.ShutdownSignalException: channel error； protocol method: #method＜channel.c</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-68624.htm" title="碳化炉设备（碳化炉设备清单表）">碳化炉设备（碳化炉设备清单表）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-24-node-share-links.htm" title="乍得VPN | 2月24日18.1M/S|免费Clash/SSR/Shadowrocket/V2ray免费节点订阅分享">乍得VPN | 2月24日18.1M/S|免费Clash/SSR/Shadowrocket/V2ray免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-72541.htm" title="延吉市宠物医院推荐（延吉市宠物狗）">延吉市宠物医院推荐（延吉市宠物狗）</a></li>
+                        <li class="py-2"><a href="/news/article-62442.htm" title="vue使用canvas绘制圆环_vue.js_">vue使用canvas绘制圆环_vue.js_</a></li>
+                        <li class="py-2"><a href="/news/article-67967.htm" title="Spring cache源码分析">Spring cache源码分析</a></li>
+                        <li class="py-2"><a href="/news/article-75238.htm" title="宠物粮食加工厂设备生产厂家电话号码查询（宠物粮食加工厂设备生产厂家电话号码查询）">宠物粮食加工厂设备生产厂家电话号码查询（宠物粮食加工厂设备生产厂家电话号码查询）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-26-node-share-links.htm" title="乍得VPN | 2月26日22.4M/S|免费V2ray/Shadowrocket/Clash/SSR免费节点订阅分享">乍得VPN | 2月26日22.4M/S|免费V2ray/Shadowrocket/Clash/SSR免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-17-free-high-speed-nodes.htm" title="乍得VPN | 3月17日19.9M/S|免费Shadowrocket/Clash/SSR/V2ray免费节点订阅分享">乍得VPN | 3月17日19.9M/S|免费Shadowrocket/Clash/SSR/V2ray免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-75237.htm" title="树的同构（java实现）">树的同构（java实现）</a></li>
+                        <li class="py-2"><a href="/news/article-66716.htm" title="动物疫苗保质期几年（动物疫苗新规）">动物疫苗保质期几年（动物疫苗新规）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">78</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section><!-- End About Us Section -->
+    </main><!-- End #main -->
+        <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container footer-bottom clearfix">
+            <div class="copyright">
+                    <p>
+                        <a href="/">首页</a> | 
+                        <a href="/free-node/">免费节点</a> | 
+                        <a href="/news/">新闻资讯</a> |
+                        <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                <a href="/">乍得VPN 机场订阅节点官网</a> 版权所有 Powered by WordPress
+            </div>
+            <div class="credits"></div>
+        </div>
+    </footer><!-- End Footer -->
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Vendor JS Files -->
+    <script src="/assets/website/js/frontend/v2rayc/jquery-2.1.0.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/aos/aos.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/glightbox/js/glightbox.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/php-email-form/validate.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/waypoints/noframework.waypoints.js"></script>
+    <!-- Template Main JS File -->
+    <script src="/assets/website/js/frontend/v2rayc/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+
+</body>
+
+</html>
