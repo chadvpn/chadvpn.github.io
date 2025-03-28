@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://chadvpn.github.io/news/article-83518.htm" />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>希尔排序（Java语言实现）</title>
+        <meta name="description" content="希尔排序： 在简单插入排序经过改进的更高效版本，也称缩小增量排序。 算法基本思想： 把记录按下标的一定增量分组，对每组使用直接插入排序算法排序；随着增量逐渐减小，每组包含的关键词越来越多，当增量减至1" />
+        <link rel="icon" href="/assets/website/img/v2rayc/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="乍得VPN 机场订阅节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://chadvpn.github.io/news/article-83518.htm" />
+    <meta property="og:site_name" content="乍得VPN 机场订阅节点官网" />
+    <meta property="og:title" content="希尔排序（Java语言实现）" />
+    <meta property="og:image" content="https://chadvpn.github.io/uploads/20241122/da173c2ea0bdb40e3f8c5205c7038d42.webp" />
+        <meta property="og:release_date" content="2025-03-28T09:56:43" />
+    <meta property="og:updated_time" content="2025-03-28T09:56:43" />
+        <meta property="og:description" content="希尔排序： 在简单插入排序经过改进的更高效版本，也称缩小增量排序。 算法基本思想： 把记录按下标的一定增量分组，对每组使用直接插入排序算法排序；随着增量逐渐减小，每组包含的关键词越来越多，当增量减至1" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="希尔排序（Java语言实现）">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="/assets/website/js/frontend/v2rayc/aos/aos.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/remixicon/remixicon.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="/assets/website/css/v2rayc/style.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8ZCRTLDBJK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8ZCRTLDBJK');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top header-inner-pages">
+        <div class="container d-flex align-items-center">
+            <a href="/">
+                            <span class="logo me-auto">乍得VPN</span>
+                        </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                                        <li><a class="nav-link" href="/">首页</a></li>
+                                        <li><a class="nav-link" href="/free-nodes/">免费节点</a></li>
+                                        <li><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                        <li><a class="nav-link" href="/client.htm">客户端</a></li>
+                                    </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+        </div>
+    </header><!-- End Header -->
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><a href="/">首页</a></li>
+                    <li><a href="/news/">新闻资讯</a></li>
+                    <li>正文</li>
+                </ol>
+                <h1>希尔排序（Java语言实现）</h1>
+            </div>
+        </section><!-- End Breadcrumbs -->
+        <!-- ======= About Us Section ======= -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <p>希尔排序：<br /> 在简单插入排序经过改进的更高效版本，也称<strong>缩小增量排序</strong>。<br /> 算法基本思想：<br /> 把记录按下标的一定增量分组，对每组使用直接插入排序算法排序；<strong>随着增量逐渐减小，每组包含的关键词越来越多</strong>，当增量减至1时，整个文件恰被分成一组，算法终止。<br /> 希尔排序有两种方法：<strong>交换法</strong>(效率不高) 和<strong>移位法</strong>。<br /> 算法图解：<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220902/33f5b18bef1583cb264ede6358cb3ffe.jpg" alt="希尔排序（Java语言实现）"><br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220902/f9d4f96ff4713161a61ed240c78f3469.jpg" alt="希尔排序（Java语言实现）"><br /> 算法实现：<br /><strong>交换法：</strong></p> <pre><code class="prism language-java"><span class="token comment">//该算法是希尔排序中的交换法(效率不高)</span><span class="token keyword">public</span><span class="token keyword">static</span><span class="token keyword">void</span><span class="token function">shellSort</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">int</span> temp<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token keyword">int</span> count<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> stepSize<span class="token operator">=</span> arr<span class="token punctuation">.</span>length<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">;</span> stepSize<span class="token operator">&gt;</span><span class="token number">0</span><span class="token punctuation">;</span> stepSize<span class="token operator">/=</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span> stepSize<span class="token punctuation">;</span> i<span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token comment">//遍历各组中所有的元素(共stepSize组)，步长为stepSize</span><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span> i<span class="token operator">-</span> stepSize<span class="token punctuation">;</span> j<span class="token operator">&gt;=</span><span class="token number">0</span><span class="token punctuation">;</span> j<span class="token operator">-=</span> stepSize<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token comment">//如果当前元素大于加上步长后的那个元素，说明交换</span><span class="token keyword">if</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">&gt;</span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span> stepSize<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>                         temp<span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>                         arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span> stepSize<span class="token punctuation">]</span><span class="token punctuation">;</span>                         arr<span class="token punctuation">[</span>j<span class="token operator">+</span> stepSize<span class="token punctuation">]</span><span class="token operator">=</span> temp<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"希尔排序第"</span><span class="token operator">+</span><span class="token punctuation">(</span><span class="token operator">++</span>count<span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">"轮"</span><span class="token operator">+</span><span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"排序的结果为:"</span><span class="token operator">+</span><span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre> <p>这里的第三层循环 j -= stepSize，到第二轮stepSize = 2时，当时有点不理解，自己在纸上写了排序全过程：<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220902/f4219025eb21a7c1e9bb41aca35b1dbe.jpg" alt="希尔排序（Java语言实现）"><br /> 它可以两组进行交叉排序，且保证有序性。</p> <p><strong>移位法：</strong></p> <pre><code class="prism language-java"><span class="token comment">//对交换式的希尔排序进行优化---&gt;移位法</span><span class="token keyword">public</span><span class="token keyword">static</span><span class="token keyword">void</span><span class="token function">shellSortPlus</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token comment">//增量stepSize，并逐步缩小增量</span><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> stepSize<span class="token operator">=</span> arr<span class="token punctuation">.</span>length<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">;</span> stepSize<span class="token operator">&gt;</span><span class="token number">0</span><span class="token punctuation">;</span> stepSize<span class="token operator">/=</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token comment">//从第stepSize个元素，逐个对其所在组进行直接插入排序</span><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span> stepSize<span class="token punctuation">;</span> i<span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">int</span> j<span class="token operator">=</span> i<span class="token punctuation">;</span><span class="token keyword">int</span> temp<span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">if</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">&lt;</span> arr<span class="token punctuation">[</span>j<span class="token operator">-</span>stepSize<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">while</span><span class="token punctuation">(</span>j<span class="token operator">-</span> stepSize<span class="token operator">&gt;=</span><span class="token number">0</span><span class="token operator">&amp;&amp;</span> temp<span class="token operator">&lt;</span> arr<span class="token punctuation">[</span>j<span class="token operator">-</span>stepSize<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token comment">//移动</span>                         arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token operator">-</span>stepSize<span class="token punctuation">]</span><span class="token punctuation">;</span>                         j<span class="token operator">-=</span> stepSize<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token comment">//当退出while循环时就给temp找到插入的位置</span>                     arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">=</span> temp<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"希尔排序的结果为: "</span><span class="token operator">+</span><span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre> <p>这个移位法算法的时间效率比交换法算法的时间效率高好多。</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-82803.htm">成都宠物领养平台正规吗现在有哪些公司（成都宠物领养中心官网收容中心）</a></p>
+                                        <p>下一个：<a href="/news/article-83519.htm">动物防疫预防控制中心电话是多少（动物防疫电话咨询）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-2-26-node-share-links.htm" title="乍得VPN | 2月26日22.4M/S|免费V2ray/Shadowrocket/Clash/SSR免费节点订阅分享">乍得VPN | 2月26日22.4M/S|免费V2ray/Shadowrocket/Clash/SSR免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-25-free-v2ray-subscribe.htm" title="乍得VPN | 3月25日20.7M/S|免费V2ray/Clash/Shadowrocket/SSR免费节点订阅分享">乍得VPN | 3月25日20.7M/S|免费V2ray/Clash/Shadowrocket/SSR免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-75915.htm" title="uniapp中封装一个弹框组件">uniapp中封装一个弹框组件</a></li>
+                        <li class="py-2"><a href="/news/article-80014.htm" title="javaScript深拷贝和浅拷贝简单梳理_在线工具">javaScript深拷贝和浅拷贝简单梳理_在线工具</a></li>
+                        <li class="py-2"><a href="/news/article-82088.htm" title="【异常报错】com.rabbitmq.client.ShutdownSignalException: channel error； protocol method: #method＜channel.c">【异常报错】com.rabbitmq.client.ShutdownSignalException: channel error； protocol method: #method＜channel.c</a></li>
+                        <li class="py-2"><a href="/news/article-62441.htm" title="Androidstudio之菜单栏设置">Androidstudio之菜单栏设置</a></li>
+                        <li class="py-2"><a href="/news/article-70579.htm" title="宠物领养活动宣传语（宠物领养活动方案）">宠物领养活动宣传语（宠物领养活动方案）</a></li>
+                        <li class="py-2"><a href="/news/article-67354.htm" title="南京哪里有领养猫的（南京可以领养猫的地方）">南京哪里有领养猫的（南京可以领养猫的地方）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-7-free-node-subscribe.htm" title="乍得VPN | 3月7日23M/S|免费V2ray/Shadowrocket/SSR/Clash免费节点订阅分享">乍得VPN | 3月7日23M/S|免费V2ray/Shadowrocket/SSR/Clash免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-62442.htm" title="vue使用canvas绘制圆环_vue.js_">vue使用canvas绘制圆环_vue.js_</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section><!-- End About Us Section -->
+    </main><!-- End #main -->
+        <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container footer-bottom clearfix">
+            <div class="copyright">
+                    <p>
+                        <a href="/">首页</a> | 
+                        <a href="/free-node/">免费节点</a> | 
+                        <a href="/news/">新闻资讯</a> |
+                        <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                <a href="/">乍得VPN 机场订阅节点官网</a> 版权所有 Powered by WordPress
+            </div>
+            <div class="credits"></div>
+        </div>
+    </footer><!-- End Footer -->
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Vendor JS Files -->
+    <script src="/assets/website/js/frontend/v2rayc/jquery-2.1.0.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/aos/aos.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/glightbox/js/glightbox.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/php-email-form/validate.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/waypoints/noframework.waypoints.js"></script>
+    <!-- Template Main JS File -->
+    <script src="/assets/website/js/frontend/v2rayc/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+
+</body>
+
+</html>
