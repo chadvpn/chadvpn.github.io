@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://chadvpn.github.io/news/article-87814.htm" />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>解决antdv的table因数据量过大导致的卡顿问题</title>
+        <meta name="description" content="遇到的问题：antdv的table表格使用时因数据量过大，造成标签页切换卡顿的问题 解决办法：绑定滚动事件，页面只显示在可视区域内的数据，没在可视区域内的数据不予展示，dom元素的scrollHeig" />
+        <link rel="icon" href="/assets/website/img/v2rayc/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="乍得VPN 机场订阅节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://chadvpn.github.io/news/article-87814.htm" />
+    <meta property="og:site_name" content="乍得VPN 机场订阅节点官网" />
+    <meta property="og:title" content="解决antdv的table因数据量过大导致的卡顿问题" />
+    <meta property="og:image" content="https://chadvpn.github.io/uploads/20241122/a8ee20fa3f9c222f543d729b5186b653.webp" />
+        <meta property="og:release_date" content="2025-04-03T08:34:32" />
+    <meta property="og:updated_time" content="2025-04-03T08:34:32" />
+        <meta property="og:description" content="遇到的问题：antdv的table表格使用时因数据量过大，造成标签页切换卡顿的问题 解决办法：绑定滚动事件，页面只显示在可视区域内的数据，没在可视区域内的数据不予展示，dom元素的scrollHeig" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="解决antdv的table因数据量过大导致的卡顿问题">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="/assets/website/js/frontend/v2rayc/aos/aos.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/remixicon/remixicon.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="/assets/website/css/v2rayc/style.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8ZCRTLDBJK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8ZCRTLDBJK');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top header-inner-pages">
+        <div class="container d-flex align-items-center">
+            <a href="/">
+                            <span class="logo me-auto">乍得VPN</span>
+                        </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                                        <li><a class="nav-link" href="/">首页</a></li>
+                                        <li><a class="nav-link" href="/free-nodes/">免费节点</a></li>
+                                        <li><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                        <li><a class="nav-link" href="/client.htm">客户端</a></li>
+                                    </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+        </div>
+    </header><!-- End Header -->
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><a href="/">首页</a></li>
+                    <li><a href="/news/">新闻资讯</a></li>
+                    <li>正文</li>
+                </ol>
+                <h1>解决antdv的table因数据量过大导致的卡顿问题</h1>
+            </div>
+        </section><!-- End Breadcrumbs -->
+        <!-- ======= About Us Section ======= -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <h2><a id="antdvtable_0" rel="nofollow"></a>遇到的问题：antdv的table表格使用时因数据量过大，造成标签页切换卡顿的问题</h2> <h2><a id="domscrollHeightoffsetHeightscrollTopscrollTocountcountcountcountslice20_1" rel="nofollow"></a>解决办法：绑定滚动事件，页面只显示在可视区域内的数据，没在可视区域内的数据不予展示，dom元素的scrollHeight和offsetHeight和scrollTop三个值的比较，判断是否滑到底部了或者顶部了，滑到底部或顶部之后，用scrollTo函数改变滚动条的位置，使其可以再次触发滑到顶部或底部，用计数count，下滚一下count++,上滚一下count–，用count来从原数据里slice哪20条数据展示</h2> <p>上代码：</p> <pre><code>mounted () { document.querySelector('#test table').addEventListener('scroll', this.handleScroll) // 给dom元素绑定scroll事件，可以在mounted的时候就给他绑定 }, methods: {     handleScroll (e) {       this.scrollTop = e.target.scrollTop       this.offsetHeight = e.target.offsetHeight       this.scrollHeight = e.target.scrollHeight       // 不足20条数据，就都展示了就好       if (this.data.length &lt; 20) {         this.dataScroll= this.data         // 滑到顶部也是给个提示         if (this.scrollTop === 0) {           this.$message.warn('您已经滑到顶部了')         }         // 滑到底部还是给个提示         if ((this.scrollTop + this.offsetHeight) &gt;= this.scrollHeight) {           this.$message.warn('没有更多数据了')         }         return       }        // 滑到顶部scrollTop为0       if (this.scrollTop === 0) {         this.selectedRowKeys = []         // 计数变为1，即如果是1就代表滑到顶部了，取0-20条数的告警在可视区域         let scrollCountTop = this.scrollCount         if (this.scrollCount &lt;= 0) {           this.scrollCount = 1         }         if (this.scrollCount === 1) {           this.datascroll= this.data.slice(0, this.numberMaxOverView)  // this.numberMaxOverView是要在这一页展示的数据条数           this.$message.warn('您已经滑到顶部了')         } else {           // 如果不是在顶部，根据计数计算展示哪20条数据，同时上滑要将计数减一，将滑条改变位置为了触发下一次到顶部的计算           document.querySelector('#test .test').scrollTo(0, 10)           this.datascroll= this.data.slice(((this.numberMaxOverView * (scrollCountTop - 1) - this.cacheNum)), (this.numberMaxOverView * scrollCountTop))           this.scrollCount--         }       }             // 滑到底部       if ((this.scrollTop + this.offsetHeight) &gt;= this.scrollHeight) {         this.selectedRowKeys = []         // 如果是最后一次数据展示，计算需要展示的条数         let scrollCount = this.scrollCount         let isLastPage = this.numberMaxOverView - (this.data.length - this.scrollCount * (this.datascroll.length - this.cacheNum))         let lastNum = this.scrollCount * (this.data.length - this.cacheNum) - isLastPage         if (isLastPage &gt;= 0) {           this.datascroll= this.data.slice(lastNum - this.cacheNum, this.data.length)           this.$message.warn('没有更多数据了')         } else {           // 如果不是最后一次，根据计数计算展示哪20条数据，同时下滑要将计数加一，将滑条改变位置为了触发下一次底部计算           document.querySelector('#test.demo').scrollTo(0, 100)           // 如果是第一次下滑计算缓存不能再是触顶的0，可以是计算缓存往上10条           if ((this.numberMaxOverView * scrollCount - this.cacheNum) &lt; 0) {             this.datascroll= this.data.slice((this.numberMaxOverView - this.cacheNum), (this.numberMaxOverView * 2))             this.scrollCount++           } else {             this.datascroll= this.data.slice((this.numberMaxOverView * scrollCount - this.cacheNum), (this.numberMaxOverView * (scrollCount + 1)))             this.scrollCount++           }         }       } }</code></pre> <p>注意：addeventlistener没办法绑定上handlescroll事件，原因目前碰到的有二，一是你queryselector的时候没找到元素，如果是组件的话去控制台看一下元素的class有没有绑正确，再不然就给个你要绑定的id，在它下边找一找，总之你的dom要绑对；二是你用的组件是否需要给定scrollxy的属性才能绑定scroll事件<br /> 可以参考antdv它的list滚动无限加载的思想，如果无需其他操作只是一个list的话也可以用虚拟滚动的组件实现vue-virtual-scroller</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-87111.htm">猫粮赚钱吗（做猫粮成本）</a></p>
+                                        <p>下一个：<a href="/news/article-87815.htm">宠物领养中心在哪里（宠物领养中心官网）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-67354.htm" title="南京哪里有领养猫的（南京可以领养猫的地方）">南京哪里有领养猫的（南京可以领养猫的地方）</a></li>
+                        <li class="py-2"><a href="/news/article-75915.htm" title="uniapp中封装一个弹框组件">uniapp中封装一个弹框组件</a></li>
+                        <li class="py-2"><a href="/news/article-79320.htm" title="宠物领养怎么赚钱的呢（领养宠物赚钱软件是哪个）">宠物领养怎么赚钱的呢（领养宠物赚钱软件是哪个）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-4-node-share-links.htm" title="乍得VPN | 4月4日19.5M/S|免费Clash/Shadowrocket/V2ray/SSR免费节点订阅分享">乍得VPN | 4月4日19.5M/S|免费Clash/Shadowrocket/V2ray/SSR免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-73881.htm" title="flink内存模型详解与案例">flink内存模型详解与案例</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-5-free-high-speed-nodes.htm" title="乍得VPN | 4月5日22.9M/S|免费Clash/SSR/V2ray/Shadowrocket免费节点订阅分享">乍得VPN | 4月5日22.9M/S|免费Clash/SSR/V2ray/Shadowrocket免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-66083.htm" title="动物医院有公立的吗知乎推荐（动物医院有限公司）">动物医院有公立的吗知乎推荐（动物医院有限公司）</a></li>
+                        <li class="py-2"><a href="/news/article-67967.htm" title="Spring cache源码分析">Spring cache源码分析</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-3-free-node-subscribe-links.htm" title="乍得VPN | 4月3日18.3M/S|免费V2ray/Clash/Shadowrocket/SSR免费节点订阅分享">乍得VPN | 4月3日18.3M/S|免费V2ray/Clash/Shadowrocket/SSR免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-26-free-node-subscribe.htm" title="乍得VPN | 3月26日20.5M/S|免费Shadowrocket/V2ray/Clash/SSR免费节点订阅分享">乍得VPN | 3月26日20.5M/S|免费Shadowrocket/V2ray/Clash/SSR免费节点订阅分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">15</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section><!-- End About Us Section -->
+    </main><!-- End #main -->
+        <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container footer-bottom clearfix">
+            <div class="copyright">
+                                    <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                <a href="/">乍得VPN 机场订阅节点官网</a> 版权所有 Powered by WordPress
+            </div>
+            <div class="credits"></div>
+        </div>
+    </footer><!-- End Footer -->
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Vendor JS Files -->
+    <script src="/assets/website/js/frontend/v2rayc/jquery-2.1.0.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/aos/aos.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/glightbox/js/glightbox.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/php-email-form/validate.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/waypoints/noframework.waypoints.js"></script>
+    <!-- Template Main JS File -->
+    <script src="/assets/website/js/frontend/v2rayc/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+
+</body>
+
+</html>
