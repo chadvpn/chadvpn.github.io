@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://chadvpn.github.io/news/article-91422.htm" />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>坑——java里List的remove方法</title>
+        <meta name="description" content="写过的类似代码： /**  * 2018年5月20日上午9:54:02  */ package com.test;  import java.util.ArrayList; import java.u" />
+        <link rel="icon" href="/assets/website/img/v2rayc/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="乍得VPN 机场订阅节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://chadvpn.github.io/news/article-91422.htm" />
+    <meta property="og:site_name" content="乍得VPN 机场订阅节点官网" />
+    <meta property="og:title" content="坑——java里List的remove方法" />
+    <meta property="og:image" content="https://chadvpn.github.io/uploads/20241122/91fe29b1e229deb38d99e6921bc5984c.webp" />
+        <meta property="og:release_date" content="2025-04-08T09:56:20" />
+    <meta property="og:updated_time" content="2025-04-08T09:56:20" />
+        <meta property="og:description" content="写过的类似代码： /**  * 2018年5月20日上午9:54:02  */ package com.test;  import java.util.ArrayList; import java.u" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="坑——java里List的remove方法">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="/assets/website/js/frontend/v2rayc/aos/aos.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/remixicon/remixicon.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayc/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="/assets/website/css/v2rayc/style.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8ZCRTLDBJK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8ZCRTLDBJK');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top header-inner-pages">
+        <div class="container d-flex align-items-center">
+            <a href="/">
+                            <span class="logo me-auto">乍得VPN</span>
+                        </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                                        <li><a class="nav-link" href="/">首页</a></li>
+                                        <li><a class="nav-link" href="/free-nodes/">免费节点</a></li>
+                                        <li><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                        <li><a class="nav-link" href="/client.htm">客户端</a></li>
+                                    </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+        </div>
+    </header><!-- End Header -->
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><a href="/">首页</a></li>
+                    <li><a href="/news/">新闻资讯</a></li>
+                    <li>正文</li>
+                </ol>
+                <h1>坑——java里List的remove方法</h1>
+            </div>
+        </section><!-- End Breadcrumbs -->
+        <!-- ======= About Us Section ======= -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p>写过的类似代码：</p> <pre><code class="language-java">/**  * 2018年5月20日上午9:54:02  */ package com.test;  import java.util.ArrayList; import java.util.List;  /**  * @author xinwenfeng  *  */ public class TestListRemove {  	/** 	 * @param args 	 */ 	public static void main(String[] args) { 		List&lt;Integer&gt; ageList = new ArrayList&lt;&gt;(); 		Student stu1 = new Student(7, "Tom"); 		Student stu2 = new Student(6, "Jerry"); 		Student stu3 = new Student(4, "Mordecai"); 		Student stu4 = new Student(5, "Lilith"); 		Student stu5 = new Student(8, "Roland"); 		Student stu6 = new Student(9, "Brick"); 		ageList.add(stu1.getAge()); 		ageList.add(stu2.getAge()); 		ageList.add(stu3.getAge()); 		ageList.add(stu4.getAge()); 		ageList.add(stu5.getAge()); 		ageList.add(stu6.getAge()); 		System.out.println(ageList); 		//删掉Lilith,age=5 		ageList.remove(stu4.getAge()); 		System.out.println(ageList);//发现删掉的是stu6 		//删掉Roleand，age=8 //		ageList.remove(stu5.getAge());//Exception:java.lang.IndexOutOfBoundsException: Index: 8, Size: 5 		//正确删掉Jerry 		ageList.remove((Integer)stu2.getAge()); 		System.out.println(ageList); 	}  } class Student{ 	private int age; 	public int getAge() { 		return age; 	} 	public void setAge(int age) { 		this.age = age; 	} 	public String getName() { 		return name; 	} 	public void setName(String name) { 		this.name = name; 	} 	private String name; 	public Student(int age, String name) { 		super(); 		this.age = age; 		this.name = name; 	} 	@Override 	public String toString() { 		return age+":"+name; 	} }</code></pre> <p>结果：</p> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230108/2169b69830488c315c66afe4b93f5951.jpg" alt="坑——java里List的remove方法"></p> <p>发生这样的bug经常要找很久，因为自认为list是按照age塞进去的，按照age删肯定没问题，通常也不会想到这样的bug而优先去找业务逻辑的bug，出现这种问题的原因就在list的remove方法有两个：</p> <h5></h5> <div style="padding-top:2px;margin-left:20px;">  boolean&nbsp;<br />  <a class="header" rel="nofollow">java</a>.<br />  <a class="header" rel="nofollow">util</a>.<br />  <a class="header" rel="nofollow">List</a>.remove(<br />  <span style="font-weight:normal;"></span><br />  <a title="in java.lang" class="header" rel="nofollow">Object</a>&nbsp;o) </div> <div style="padding-top:2px;margin-left:20px;">  <a title="in java.lang" class="header" rel="nofollow">Integer</a>&nbsp;<br />  <a class="header" rel="nofollow">java</a>.<br />  <a class="header" rel="nofollow">util</a>.<br />  <a class="header" rel="nofollow">List</a>.remove(<br />  <span style="font-weight:normal;"></span>int index) </div> <p>Student的age属性是int而不是Integer，所以remove(stu.getAge())的时候传递的是int，调用的是remove(int index)方法，根据索引删除，这样造成两种结果：删错（删掉Lilith）、异常（删掉Roland）。要正常删除应把age转型成Integer对象，调用remove(Object)方法而不是remove(int)。</p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-90771.htm">动物疫苗过敏反应有哪些症状和表现（打动物疫苗有什么过敏反应）</a></p>
+                                        <p>下一个：<a href="/news/article-91423.htm">vue项目中Toast字体过小,没有边距的解决方案_vue.js</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-90026.htm" title="被猫爪子勾了一下出了一点血需要打几针（被猫爪子勾了一下出了一点血用不用***）">被猫爪子勾了一下出了一点血需要打几针（被猫爪子勾了一下出了一点血用不用***）</a></li>
+                        <li class="py-2"><a href="/news/article-66083.htm" title="动物医院有公立的吗知乎推荐（动物医院有限公司）">动物医院有公立的吗知乎推荐（动物医院有限公司）</a></li>
+                        <li class="py-2"><a href="/news/article-88554.htm" title="领养宠物协议书范本模板大全 领养宠物协议书范本模板大全图片">领养宠物协议书范本模板大全 领养宠物协议书范本模板大全图片</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-24-free-node-subscribe-links.htm" title="乍得VPN | 3月24日22.2M/S|免费SSR/Shadowrocket/V2ray/Clash免费节点订阅分享">乍得VPN | 3月24日22.2M/S|免费SSR/Shadowrocket/V2ray/Clash免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-71889.htm" title="SpringBoot-日期格式化">SpringBoot-日期格式化</a></li>
+                        <li class="py-2"><a href="/news/article-70579.htm" title="宠物领养活动宣传语（宠物领养活动方案）">宠物领养活动宣传语（宠物领养活动方案）</a></li>
+                        <li class="py-2"><a href="/news/article-67354.htm" title="南京哪里有领养猫的（南京可以领养猫的地方）">南京哪里有领养猫的（南京可以领养猫的地方）</a></li>
+                        <li class="py-2"><a href="/news/article-82088.htm" title="【异常报错】com.rabbitmq.client.ShutdownSignalException: channel error； protocol method: #method＜channel.c">【异常报错】com.rabbitmq.client.ShutdownSignalException: channel error； protocol method: #method＜channel.c</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-3-free-node-subscribe-links.htm" title="乍得VPN | 4月3日18.3M/S|免费V2ray/Clash/Shadowrocket/SSR免费节点订阅分享">乍得VPN | 4月3日18.3M/S|免费V2ray/Clash/Shadowrocket/SSR免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-85678.htm" title="佳雯宠物医院是全国连锁吗知乎（佳雯宠物医院总部地址）">佳雯宠物医院是全国连锁吗知乎（佳雯宠物医院总部地址）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">24</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section><!-- End About Us Section -->
+    </main><!-- End #main -->
+        <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container footer-bottom clearfix">
+            <div class="copyright">
+                                    <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                <a href="/">乍得VPN 机场订阅节点官网</a> 版权所有 Powered by WordPress
+            </div>
+            <div class="credits"></div>
+        </div>
+    </footer><!-- End Footer -->
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Vendor JS Files -->
+    <script src="/assets/website/js/frontend/v2rayc/jquery-2.1.0.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/aos/aos.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/glightbox/js/glightbox.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/php-email-form/validate.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/v2rayc/waypoints/noframework.waypoints.js"></script>
+    <!-- Template Main JS File -->
+    <script src="/assets/website/js/frontend/v2rayc/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+
+</body>
+
+</html>
