@@ -305,37 +305,13 @@ IP-CIDR,192.168.0.0/16,DIRECT
 <div class="clearfix"></div>
 <div class="col-md-12 mt-5">
         <p>上一个：<a href="/free-nodes/2026-5-6-vpn-github.htm">乍得VPN | 5月6日18.1M/S|免费Clash节点/Singbox节点/Trojan节点/Shadowrocket节点/SSR节点/V2ray节点免费节点订阅分享</a></p>
+        <p>下一个：<a href="/free-nodes/2026-5-8-vpn-free.htm">乍得VPN | 5月8日22.2M/S|免费V2ray节点/Clash节点/Shadowrocket节点/Trojan节点/SSR节点/Singbox节点免费节点订阅分享</a></p>
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 的路由规则可设置哪些匹配条件？</h5></div>
+    <div class="panel-heading"><h5>Clash 的 Rule Provider 功能有哪些好处？</h5></div>
     <div class="panel-body">
-        路由规则支持按域名、IP 地址、端口、协议类型或用户标签进行匹配。结合策略组，可实现国内直连、国外代理或特定节点定向分流，满足不同网络需求。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Potatso Lite 手动节点切换有哪些优点？</h5></div>
-    <div class="panel-body">
-        手动切换节点可以根据延迟和用途选择最佳节点，适合在节点不稳定或特殊需求下使用。虽然不支持自动订阅更新，但足够满足轻量用户对节点管理和分流的需求。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 的 DNS 模块如何提升解析速度？</h5></div>
-    <div class="panel-body">
-        V2Ray 内置 DNS 模块支持并行解析，可同时请求多个上游 DNS 服务器。用户可配置本地优先解析或远程解析策略，从而减少域名污染与延迟问题。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>PassWall2 的分组策略可以自动切换节点吗？</h5></div>
-    <div class="panel-body">
-        可以。用户可以设置策略组，PassWall2 会定期测速并根据延迟或成功率自动选择最优节点，实现智能节点切换，保证网络稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Mihomo 节点分组如何保证低延迟访问？</h5></div>
-    <div class="panel-body">
-        将节点按延迟、地区或用途分组，并启用策略组，系统会根据节点健康和延迟自动选择最佳节点。保证网页浏览、视频播放和游戏流量的低延迟稳定连接。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 可以导入哪些格式的规则文件？</h5></div>
-    <div class="panel-body">
-        Surfboard 支持 YAML 和部分 JSON 格式的规则文件，用户可以导入节点、策略组和分流规则。注意文件格式和语法必须符合 Surfboard 规范，否则可能导入失败。<hr />    </div>
+        Rule Provider 可通过远程订阅自动更新规则和节点，减少手动维护。结合策略组，可实现分流规则和节点的自动同步，保证分流效率和网络可用性。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Hiddify Next 如何设置不同用户的带宽限制？</h5></div>
@@ -343,19 +319,44 @@ IP-CIDR,192.168.0.0/16,DIRECT
         管理员可为每个用户设置独立的带宽上限和流量配额。超过配额后可自动阻断或降速，确保服务器资源合理分配，避免单个用户占用过多带宽而影响其他用户体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Shadowrocket 能否自动更新订阅？</h5></div>
+    <div class="panel-body">
+        支持。Shadowrocket 可以设置定时更新周期，例如每隔 12 小时或每天自动刷新订阅链接，确保节点列表保持最新状态。这样无需手动更新即可长期稳定使用。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Surfboard 可以导入哪些格式的规则文件？</h5></div>
+    <div class="panel-body">
+        Surfboard 支持 YAML 和部分 JSON 格式的规则文件，用户可以导入节点、策略组和分流规则。注意文件格式和语法必须符合 Surfboard 规范，否则可能导入失败。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Potatso Lite 手动节点切换有哪些优点？</h5></div>
+    <div class="panel-body">
+        手动切换节点可以根据延迟和用途选择最佳节点，适合在节点不稳定或特殊需求下使用。虽然不支持自动订阅更新，但足够满足轻量用户对节点管理和分流的需求。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Mihomo 节点分组如何保证低延迟访问？</h5></div>
+    <div class="panel-body">
+        将节点按延迟、地区或用途分组，并启用策略组，系统会根据节点健康和延迟自动选择最佳节点。保证网页浏览、视频播放和游戏流量的低延迟稳定连接。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>V2Ray 的 DNS 模块如何提升解析速度？</h5></div>
+    <div class="panel-body">
+        V2Ray 内置 DNS 模块支持并行解析，可同时请求多个上游 DNS 服务器。用户可配置本地优先解析或远程解析策略，从而减少域名污染与延迟问题。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>V2Ray 的路由规则可设置哪些匹配条件？</h5></div>
+    <div class="panel-body">
+        路由规则支持按域名、IP 地址、端口、协议类型或用户标签进行匹配。结合策略组，可实现国内直连、国外代理或特定节点定向分流，满足不同网络需求。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>VLess 为什么被认为是未来趋势？</h5></div>
     <div class="panel-body">
         VLess 去掉了内置加密层，改为依赖外部 TLS 进行安全通信，这使其更轻量化且更灵活。它能与 Hysteria、Reality 等现代传输方式结合使用，适应性更强，是取代 Vmess 的新标准。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 的 Rule Provider 功能有哪些好处？</h5></div>
+    <div class="panel-heading"><h5>PassWall2 的分组策略可以自动切换节点吗？</h5></div>
     <div class="panel-body">
-        Rule Provider 可通过远程订阅自动更新规则和节点，减少手动维护。结合策略组，可实现分流规则和节点的自动同步，保证分流效率和网络可用性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Shadowrocket 能否自动更新订阅？</h5></div>
-    <div class="panel-body">
-        支持。Shadowrocket 可以设置定时更新周期，例如每隔 12 小时或每天自动刷新订阅链接，确保节点列表保持最新状态。这样无需手动更新即可长期稳定使用。    </div>
+        可以。用户可以设置策略组，PassWall2 会定期测速并根据延迟或成功率自动选择最优节点，实现智能节点切换，保证网络稳定性。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -384,16 +385,16 @@ IP-CIDR,192.168.0.0/16,DIRECT
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-4-24-top-vpn-node.htm" title="乍得VPN | 4月24日22.4M/S|免费Singbox节点/V2ray节点/SSR节点/Trojan节点/Shadowrocket节点/Clash节点免费节点订阅分享">乍得VPN | 4月24日22.4M/S|免费Singbox节点/V2ray节点/SSR节点/Trojan节点/Shadowrocket节点/Clash节点免费节点订阅分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-29-share-vpn.htm" title="乍得VPN | 4月29日20.9M/S|免费V2ray节点/Shadowrocket节点/SSR节点/Trojan节点/Clash节点/Singbox节点免费节点订阅分享">乍得VPN | 4月29日20.9M/S|免费V2ray节点/Shadowrocket节点/SSR节点/Trojan节点/Clash节点/Singbox节点免费节点订阅分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-6-vpn-github.htm" title="乍得VPN | 5月6日18.1M/S|免费Clash节点/Singbox节点/Trojan节点/Shadowrocket节点/SSR节点/V2ray节点免费节点订阅分享">乍得VPN | 5月6日18.1M/S|免费Clash节点/Singbox节点/Trojan节点/Shadowrocket节点/SSR节点/V2ray节点免费节点订阅分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-19-node-share.htm" title="乍得VPN | 4月19日18.4M/S|免费Shadowrocket节点/Trojan节点/Singbox节点/SSR节点/V2ray节点/Clash节点免费节点订阅分享">乍得VPN | 4月19日18.4M/S|免费Shadowrocket节点/Trojan节点/Singbox节点/SSR节点/V2ray节点/Clash节点免费节点订阅分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-30-free-vpn-node.htm" title="乍得VPN | 4月30日22.3M/S|免费Clash节点/Singbox节点/Shadowrocket节点/SSR节点/V2ray节点/Trojan节点免费节点订阅分享">乍得VPN | 4月30日22.3M/S|免费Clash节点/Singbox节点/Shadowrocket节点/SSR节点/V2ray节点/Trojan节点免费节点订阅分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-27-vpn-node.htm" title="乍得VPN | 4月27日18.4M/S|免费Shadowrocket节点/SSR节点/Trojan节点/V2ray节点/Clash节点/Singbox节点免费节点订阅分享">乍得VPN | 4月27日18.4M/S|免费Shadowrocket节点/SSR节点/Trojan节点/V2ray节点/Clash节点/Singbox节点免费节点订阅分享</a></li>
                         <li class="py-2"><a href="/free-nodes/2026-4-22-top-vpn.htm" title="乍得VPN | 4月22日19.3M/S|免费Shadowrocket节点/Clash节点/Singbox节点/Trojan节点/SSR节点/V2ray节点免费节点订阅分享">乍得VPN | 4月22日19.3M/S|免费Shadowrocket节点/Clash节点/Singbox节点/Trojan节点/SSR节点/V2ray节点免费节点订阅分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-18-free-node-subscribe.htm" title="乍得VPN | 4月18日21.3M/S|免费SSR节点/V2ray节点/Trojan节点/Clash节点/Singbox节点/Shadowrocket节点免费节点订阅分享">乍得VPN | 4月18日21.3M/S|免费SSR节点/V2ray节点/Trojan节点/Clash节点/Singbox节点/Shadowrocket节点免费节点订阅分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-12-vpn-github.htm" title="乍得VPN | 4月12日18.9M/S|免费Shadowrocket节点/V2ray节点/Trojan节点/SSR节点/Clash节点/Singbox节点免费节点订阅分享">乍得VPN | 4月12日18.9M/S|免费Shadowrocket节点/V2ray节点/Trojan节点/SSR节点/Clash节点/Singbox节点免费节点订阅分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-15-free-node-subscribe-links.htm" title="乍得VPN | 4月15日22.7M/S|免费V2ray节点/Clash节点/SSR节点/Singbox节点/Trojan节点/Shadowrocket节点免费节点订阅分享">乍得VPN | 4月15日22.7M/S|免费V2ray节点/Clash节点/SSR节点/Singbox节点/Trojan节点/Shadowrocket节点免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-20-share-vpn.htm" title="乍得VPN | 4月20日21.1M/S|免费V2ray节点/Clash节点/Singbox节点/Shadowrocket节点/SSR节点/Trojan节点免费节点订阅分享">乍得VPN | 4月20日21.1M/S|免费V2ray节点/Clash节点/Singbox节点/Shadowrocket节点/SSR节点/Trojan节点免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-12-vpn-proxy.htm" title="乍得VPN | 5月12日21.2M/S|免费SSR节点/V2ray节点/Clash节点/Trojan节点/Singbox节点/Shadowrocket节点免费节点订阅分享">乍得VPN | 5月12日21.2M/S|免费SSR节点/V2ray节点/Clash节点/Trojan节点/Singbox节点/Shadowrocket节点免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-13-top-vpn-node.htm" title="乍得VPN | 5月13日21.7M/S|免费Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点/SSR节点免费节点订阅分享">乍得VPN | 5月13日21.7M/S|免费Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点/SSR节点免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-24-top-vpn-node.htm" title="乍得VPN | 4月24日22.4M/S|免费Singbox节点/V2ray节点/SSR节点/Trojan节点/Shadowrocket节点/Clash节点免费节点订阅分享">乍得VPN | 4月24日22.4M/S|免费Singbox节点/V2ray节点/SSR节点/Trojan节点/Shadowrocket节点/Clash节点免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-25-share-vpn.htm" title="乍得VPN | 4月25日22.8M/S|免费SSR节点/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点免费节点订阅分享">乍得VPN | 4月25日22.8M/S|免费SSR节点/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-1-vpn-proxy.htm" title="乍得VPN | 5月1日22.6M/S|免费Trojan节点/Singbox节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点免费节点订阅分享">乍得VPN | 5月1日22.6M/S|免费Trojan节点/Singbox节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-3-free-node-subscribe-links.htm" title="乍得VPN | 5月3日22.6M/S|免费Singbox节点/Trojan节点/V2ray节点/Shadowrocket节点/Clash节点/SSR节点免费节点订阅分享">乍得VPN | 5月3日22.6M/S|免费Singbox节点/Trojan节点/V2ray节点/Shadowrocket节点/Clash节点/SSR节点免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-14-vpn-proxy.htm" title="乍得VPN | 5月14日19.6M/S|免费SSR节点/Singbox节点/Shadowrocket节点/Trojan节点/V2ray节点/Clash节点免费节点订阅分享">乍得VPN | 5月14日19.6M/S|免费SSR节点/Singbox节点/Shadowrocket节点/Trojan节点/V2ray节点/Clash节点免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-9-node-share.htm" title="乍得VPN | 5月9日18.5M/S|免费Trojan节点/Singbox节点/SSR节点/Shadowrocket节点/V2ray节点/Clash节点免费节点订阅分享">乍得VPN | 5月9日18.5M/S|免费Trojan节点/Singbox节点/SSR节点/Shadowrocket节点/V2ray节点/Clash节点免费节点订阅分享</a></li>
                     </ul>
     </div>
 </div>
@@ -405,10 +406,10 @@ IP-CIDR,192.168.0.0/16,DIRECT
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">7</span> <a href="/date/2026-05/" title="2026-05 归档">2026-05</a></h4>
+                <h4><span class="badge" style="float: right;">14</span> <a href="/date/2026-05/" title="2026-05 归档">2026-05</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">22</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
+                <h4><span class="badge" style="float: right;">19</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
             </li>
                     </ul>
     </div>
