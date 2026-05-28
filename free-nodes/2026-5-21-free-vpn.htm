@@ -289,12 +289,13 @@ A：打开手机设置 &gt; WLAN，长按原有 Wi-Fi 网络，选择“忽略�
 <div class="clearfix"></div>
 <div class="col-md-12 mt-5">
         <p>上一个：<a href="/free-nodes/2026-5-20-share-vpn.htm">乍得VPN | 5月20日22.6M/S|免费V2ray节点/Singbox节点/Clash节点/SSR节点/Shadowrocket节点/Trojan节点免费节点订阅分享</a></p>
+        <p>下一个：<a href="/free-nodes/2026-5-22-vpn-free.htm">乍得VPN | 5月22日21.9M/S|免费Shadowrocket节点/Singbox节点/SSR节点/V2ray节点/Clash节点/Trojan节点免费节点订阅分享</a></p>
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Potatso Lite 是什么？</h5></div>
+    <div class="panel-heading"><h5>Clash 的策略组如何提升分流效率？</h5></div>
     <div class="panel-body">
-        Potatso Lite 是 iOS 上的一款代理客户端，操作简单、界面清爽，适合基础用户。它支持 Shadowsocks、Vmess 等协议，提供流量统计和节点切换功能。虽然功能不如 Quantumult X 强大，但非常易用且稳定。<hr />    </div>
+        策略组可以将多个节点或规则组合在一起，实现按条件自动选择最佳节点。通过策略组，用户无需手动切换节点即可根据延迟、地理位置或流量类型自动分流，提高网络效率。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Trojan-Go 与 Trojan 有什么区别？</h5></div>
@@ -302,19 +303,19 @@ A：打开手机设置 &gt; WLAN，长按原有 Wi-Fi 网络，选择“忽略�
         Trojan-Go 是 Trojan 的改进版，加入了多路复用、WebSocket 和 gRPC 支持。它兼容原版配置，同时在性能和连接灵活性上更优秀，适合多环境部署。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess 使用 AEAD 加密对安全性有何帮助？</h5></div>
-    <div class="panel-body">
-        AEAD 加密可防止数据篡改、重放攻击和流量特征泄露。高封锁环境下使用，有助于保持节点长期可用，保证数据安全和连接稳定性，同时降低被检测的风险。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 的策略组如何提升分流效率？</h5></div>
-    <div class="panel-body">
-        策略组可以将多个节点或规则组合在一起，实现按条件自动选择最佳节点。通过策略组，用户无需手动切换节点即可根据延迟、地理位置或流量类型自动分流，提高网络效率。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Matsuri 可以用于 Android 吗？</h5></div>
     <div class="panel-body">
         Matsuri 主要针对桌面平台开发，目前并未推出 Android 版本。但可使用其配置文件在兼容的客户端（如 Nekobox 或 Clash Android）中加载以获得类似体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>如何为 Trojan 配置 ALPN 与 SNI 提升伪装效果？</h5></div>
+    <div class="panel-body">
+        在服务器与客户端配置中设置合适的 SNI（伪装域名）并启用 ALPN（例如 http/1.1），确保 TLS 握手时使用常见的应用层协议标识，从而增加流量与普通 HTTPS 的相似度，降低被检测概率。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>VMess 使用 AEAD 加密对安全性有何帮助？</h5></div>
+    <div class="panel-body">
+        AEAD 加密可防止数据篡改、重放攻击和流量特征泄露。高封锁环境下使用，有助于保持节点长期可用，保证数据安全和连接稳定性，同时降低被检测的风险。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>V2Ray 的 TCP + TLS 模式适合什么场景？</h5></div>
@@ -327,11 +328,6 @@ A：打开手机设置 &gt; WLAN，长按原有 Wi-Fi 网络，选择“忽略�
         支持。Shadowrocket 可以批量测速节点延迟并标记最佳连接。用户还可设置自动切换到最低延迟节点，实现稳定高速的上网体验，尤其在网络波动较大的环境中效果明显。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>如何为 Trojan 配置 ALPN 与 SNI 提升伪装效果？</h5></div>
-    <div class="panel-body">
-        在服务器与客户端配置中设置合适的 SNI（伪装域名）并启用 ALPN（例如 http/1.1），确保 TLS 握手时使用常见的应用层协议标识，从而增加流量与普通 HTTPS 的相似度，降低被检测概率。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Clash 的 Proxy Group 能实现哪些策略？</h5></div>
     <div class="panel-body">
         Proxy Group 可以定义多种策略，如按延迟选择、随机、轮询或手动选择节点。结合分流规则，可实现针对不同网站或应用的智能代理，提高网络体验。<hr />    </div>
@@ -339,7 +335,12 @@ A：打开手机设置 &gt; WLAN，长按原有 Wi-Fi 网络，选择“忽略�
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Clash 的 Rule Provider 功能有哪些好处？</h5></div>
     <div class="panel-body">
-        Rule Provider 可通过远程订阅自动更新规则和节点，减少手动维护。结合策略组，可实现分流规则和节点的自动同步，保证分流效率和网络可用性。    </div>
+        Rule Provider 可通过远程订阅自动更新规则和节点，减少手动维护。结合策略组，可实现分流规则和节点的自动同步，保证分流效率和网络可用性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Potatso Lite 是什么？</h5></div>
+    <div class="panel-body">
+        Potatso Lite 是 iOS 上的一款代理客户端，操作简单、界面清爽，适合基础用户。它支持 Shadowsocks、Vmess 等协议，提供流量统计和节点切换功能。虽然功能不如 Quantumult X 强大，但非常易用且稳定。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -368,16 +369,16 @@ A：打开手机设置 &gt; WLAN，长按原有 Wi-Fi 网络，选择“忽略�
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-4-19-node-share.htm" title="乍得VPN | 4月19日18.4M/S|免费Shadowrocket节点/Trojan节点/Singbox节点/SSR节点/V2ray节点/Clash节点免费节点订阅分享">乍得VPN | 4月19日18.4M/S|免费Shadowrocket节点/Trojan节点/Singbox节点/SSR节点/V2ray节点/Clash节点免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-25-free-vpn.htm" title="乍得VPN | 5月25日20M/S|免费Shadowrocket节点/Clash节点/V2ray节点/Trojan节点/SSR节点/Singbox节点免费节点订阅分享">乍得VPN | 5月25日20M/S|免费Shadowrocket节点/Clash节点/V2ray节点/Trojan节点/SSR节点/Singbox节点免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-15-free-node-subscribe-links.htm" title="乍得VPN | 4月15日22.7M/S|免费V2ray节点/Clash节点/SSR节点/Singbox节点/Trojan节点/Shadowrocket节点免费节点订阅分享">乍得VPN | 4月15日22.7M/S|免费V2ray节点/Clash节点/SSR节点/Singbox节点/Trojan节点/Shadowrocket节点免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-21-free-vpn.htm" title="乍得VPN | 5月21日21.7M/S|免费SSR节点/Trojan节点/Shadowrocket节点/V2ray节点/Singbox节点/Clash节点免费节点订阅分享">乍得VPN | 5月21日21.7M/S|免费SSR节点/Trojan节点/Shadowrocket节点/V2ray节点/Singbox节点/Clash节点免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-1-vpn-proxy.htm" title="乍得VPN | 5月1日22.6M/S|免费Trojan节点/Singbox节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点免费节点订阅分享">乍得VPN | 5月1日22.6M/S|免费Trojan节点/Singbox节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-25-share-vpn.htm" title="乍得VPN | 4月25日22.8M/S|免费SSR节点/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点免费节点订阅分享">乍得VPN | 4月25日22.8M/S|免费SSR节点/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-3-free-node-subscribe-links.htm" title="乍得VPN | 5月3日22.6M/S|免费Singbox节点/Trojan节点/V2ray节点/Shadowrocket节点/Clash节点/SSR节点免费节点订阅分享">乍得VPN | 5月3日22.6M/S|免费Singbox节点/Trojan节点/V2ray节点/Shadowrocket节点/Clash节点/SSR节点免费节点订阅分享</a></li>
                         <li class="py-2"><a href="/free-nodes/2026-5-8-vpn-free.htm" title="乍得VPN | 5月8日22.2M/S|免费V2ray节点/Clash节点/Shadowrocket节点/Trojan节点/SSR节点/Singbox节点免费节点订阅分享">乍得VPN | 5月8日22.2M/S|免费V2ray节点/Clash节点/Shadowrocket节点/Trojan节点/SSR节点/Singbox节点免费节点订阅分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-4-top-vpn-node.htm" title="乍得VPN | 5月4日18.9M/S|免费SSR节点/Clash节点/Trojan节点/V2ray节点/Shadowrocket节点/Singbox节点免费节点订阅分享">乍得VPN | 5月4日18.9M/S|免费SSR节点/Clash节点/Trojan节点/V2ray节点/Shadowrocket节点/Singbox节点免费节点订阅分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-2-node-share.htm" title="乍得VPN | 5月2日19M/S|免费Clash节点/Trojan节点/Shadowrocket节点/SSR节点/V2ray节点/Singbox节点免费节点订阅分享">乍得VPN | 5月2日19M/S|免费Clash节点/Trojan节点/Shadowrocket节点/SSR节点/V2ray节点/Singbox节点免费节点订阅分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-26-mianfei-vpn.htm" title="乍得VPN | 4月26日19.5M/S|免费Clash节点/SSR节点/Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点免费节点订阅分享">乍得VPN | 4月26日19.5M/S|免费Clash节点/SSR节点/Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点免费节点订阅分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-12-vpn-github.htm" title="乍得VPN | 4月12日18.9M/S|免费Shadowrocket节点/V2ray节点/Trojan节点/SSR节点/Clash节点/Singbox节点免费节点订阅分享">乍得VPN | 4月12日18.9M/S|免费Shadowrocket节点/V2ray节点/Trojan节点/SSR节点/Clash节点/Singbox节点免费节点订阅分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-16-free-node-subscribe.htm" title="乍得VPN | 5月16日22.8M/S|免费Shadowrocket节点/Trojan节点/Clash节点/V2ray节点/SSR节点/Singbox节点免费节点订阅分享">乍得VPN | 5月16日22.8M/S|免费Shadowrocket节点/Trojan节点/Clash节点/V2ray节点/SSR节点/Singbox节点免费节点订阅分享</a></li>
                         <li class="py-2"><a href="/free-nodes/2026-5-17-share-vpn.htm" title="乍得VPN | 5月17日20.8M/S|免费Trojan节点/SSR节点/Singbox节点/Shadowrocket节点/Clash节点/V2ray节点免费节点订阅分享">乍得VPN | 5月17日20.8M/S|免费Trojan节点/SSR节点/Singbox节点/Shadowrocket节点/Clash节点/V2ray节点免费节点订阅分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-6-vpn-github.htm" title="乍得VPN | 5月6日18.1M/S|免费Clash节点/Singbox节点/Trojan节点/Shadowrocket节点/SSR节点/V2ray节点免费节点订阅分享">乍得VPN | 5月6日18.1M/S|免费Clash节点/Singbox节点/Trojan节点/Shadowrocket节点/SSR节点/V2ray节点免费节点订阅分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-18-free-node-subscribe.htm" title="乍得VPN | 4月18日21.3M/S|免费SSR节点/V2ray节点/Trojan节点/Clash节点/Singbox节点/Shadowrocket节点免费节点订阅分享">乍得VPN | 4月18日21.3M/S|免费SSR节点/V2ray节点/Trojan节点/Clash节点/Singbox节点/Shadowrocket节点免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-15-node-share.htm" title="乍得VPN | 5月15日18.9M/S|免费Trojan节点/Clash节点/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点免费节点订阅分享">乍得VPN | 5月15日18.9M/S|免费Trojan节点/Clash节点/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-4-top-vpn-node.htm" title="乍得VPN | 5月4日18.9M/S|免费SSR节点/Clash节点/Trojan节点/V2ray节点/Shadowrocket节点/Singbox节点免费节点订阅分享">乍得VPN | 5月4日18.9M/S|免费SSR节点/Clash节点/Trojan节点/V2ray节点/Shadowrocket节点/Singbox节点免费节点订阅分享</a></li>
                     </ul>
     </div>
 </div>
@@ -389,7 +390,7 @@ A：打开手机设置 &gt; WLAN，长按原有 Wi-Fi 网络，选择“忽略�
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">21</span> <a href="/date/2026-05/" title="2026-05 归档">2026-05</a></h4>
+                <h4><span class="badge" style="float: right;">28</span> <a href="/date/2026-05/" title="2026-05 归档">2026-05</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">19</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
