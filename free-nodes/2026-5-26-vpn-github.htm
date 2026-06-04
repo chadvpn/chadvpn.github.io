@@ -331,29 +331,9 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 如何保证规则订阅的实时更新？</h5></div>
+    <div class="panel-heading"><h5>SSR 的混淆参数如何选择才能兼顾速度与隐蔽性？</h5></div>
     <div class="panel-body">
-        Sing-box 支持远程规则订阅 URL，可设置定期自动更新频率，如每小时或每天。自动更新保证节点和规则保持最新，减少手动维护，提高访问速度和分流效率。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess 使用 AEAD 加密对安全性有何帮助？</h5></div>
-    <div class="panel-body">
-        AEAD 加密可防止数据篡改、重放攻击和流量特征泄露。高封锁环境下使用，有助于保持节点长期可用，保证数据安全和连接稳定性，同时降低被检测的风险。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 能否同步 iCloud 配置？</h5></div>
-    <div class="panel-body">
-        可以。Surfboard 支持 iCloud 同步功能，用户可在不同苹果设备上共享同一配置文件。这样即使更换手机或重装系统，也能自动恢复节点与分流设置。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Hiddify Next 如何设置用户带宽限制？</h5></div>
-    <div class="panel-body">
-        管理员可为每个用户设置上传和下载带宽上限。超出限制可自动降速或阻止访问，保证服务器资源合理分配，避免单用户占用过多带宽，提高整体公平性和使用效率。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>PassWall2 的节点测速结果会自动更新吗？</h5></div>
-    <div class="panel-body">
-        PassWall2 可设置定期自动测速节点，更新延迟和可用性。结合策略组自动选择最优节点，可确保用户使用网络时始终连接到速度最快、最稳定的节点。<hr />    </div>
+        混淆参数建议根据网络环境选择，一般 http_simple 兼容性最好，tls1.2_ticket_auth 隐蔽性更强。若节点在国内访问，选择简单混淆可提升速度，若跨境访问频繁则推荐 TLS 混淆提高安全性。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>QuantumultX 的广告屏蔽原理是什么？</h5></div>
@@ -361,9 +341,9 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         QuantumultX 使用分流规则与脚本结合的方式实现广告屏蔽。通过重写 HTTP 请求和阻止特定域名，它能有效去除 App 内广告或网页弹窗，提升浏览体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 如何实现域名白名单策略？</h5></div>
+    <div class="panel-heading"><h5>Surfboard 能否同步 iCloud 配置？</h5></div>
     <div class="panel-body">
-        Clash 可以通过策略组结合规则文件，将指定域名或网站加入白名单，实现直连而不经过代理节点。这样可以保证国内访问速度，同时节省节点带宽资源，提高整体网络效率。<hr />    </div>
+        可以。Surfboard 支持 iCloud 同步功能，用户可在不同苹果设备上共享同一配置文件。这样即使更换手机或重装系统，也能自动恢复节点与分流设置。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Nekoray 节点订阅失败如何处理？</h5></div>
@@ -371,14 +351,34 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         首先确认订阅 URL 是否有效，并确保网络连接正常。可手动刷新或重新添加订阅链接，保证节点列表最新。结合策略组使用，确保稳定科学上网体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>VMess 使用 AEAD 加密对安全性有何帮助？</h5></div>
+    <div class="panel-body">
+        AEAD 加密可防止数据篡改、重放攻击和流量特征泄露。高封锁环境下使用，有助于保持节点长期可用，保证数据安全和连接稳定性，同时降低被检测的风险。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Sing-box 如何保证规则订阅的实时更新？</h5></div>
+    <div class="panel-body">
+        Sing-box 支持远程规则订阅 URL，可设置定期自动更新频率，如每小时或每天。自动更新保证节点和规则保持最新，减少手动维护，提高访问速度和分流效率。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>PassWall2 的节点测速结果会自动更新吗？</h5></div>
+    <div class="panel-body">
+        PassWall2 可设置定期自动测速节点，更新延迟和可用性。结合策略组自动选择最优节点，可确保用户使用网络时始终连接到速度最快、最稳定的节点。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Clash 如何实现域名白名单策略？</h5></div>
+    <div class="panel-body">
+        Clash 可以通过策略组结合规则文件，将指定域名或网站加入白名单，实现直连而不经过代理节点。这样可以保证国内访问速度，同时节省节点带宽资源，提高整体网络效率。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Surfboard 的配置文件可以手动编辑吗？</h5></div>
     <div class="panel-body">
         Surfboard 的配置文件是基于 YAML 格式的文本文件，可以手动编辑。通过修改策略、节点组或规则部分，用户可自由定制代理逻辑，也可通过导入订阅实现自动更新。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 的混淆参数如何选择才能兼顾速度与隐蔽性？</h5></div>
+    <div class="panel-heading"><h5>Hiddify Next 如何设置用户带宽限制？</h5></div>
     <div class="panel-body">
-        混淆参数建议根据网络环境选择，一般 http_simple 兼容性最好，tls1.2_ticket_auth 隐蔽性更强。若节点在国内访问，选择简单混淆可提升速度，若跨境访问频繁则推荐 TLS 混淆提高安全性。    </div>
+        管理员可为每个用户设置上传和下载带宽上限。超出限制可自动降速或阻止访问，保证服务器资源合理分配，避免单用户占用过多带宽，提高整体公平性和使用效率。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -401,22 +401,43 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
 </div>
                     </div>
                     <div class="col-md-3">
-                        <div class="panel panel-default">
+                        <div class="panel panel-default box right-ad-box">
+    <div class="panel-heading">
+        <h3 class="panel-title">特别推荐</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="text-center">
+                <a href="javascript:;" class="js_to" data-url="https://www.futizi.net/?code=" data-type="Luniuyun" data-code="svvkQf3y" target="_blank">
+                    <img src="/assets/website/img/G/luniuyun.webp" class="avatar" alt="绿牛云">
+                </a>
+                <dl>
+                    <dt><a href="javascript:;" class="js_to" data-url="https://www.futizi.net/?code=" data-type="Luniuyun" data-code="svvkQf3y" target="_blank">绿牛云</a></dt>
+                    <dd>
+                        <p>高速稳定的网络加速</p>
+                        <p>畅享全球内容，访问 ChatGPT、TikTok、Google 等热门网站。
+全平台支持 · 7×24 专业客服 · 采用军工级安全加密传输技术。</p>                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading">
         <h3 class="panel-title">热门文章</h3>
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-4-21-node-share-links.htm" title="乍得VPN | 4月21日20.1M/S|免费Shadowrocket节点/SSR节点/Singbox节点/Clash节点/Trojan节点/V2ray节点免费节点订阅分享">乍得VPN | 4月21日20.1M/S|免费Shadowrocket节点/SSR节点/Singbox节点/Clash节点/Trojan节点/V2ray节点免费节点订阅分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-28-vpn-free.htm" title="乍得VPN | 5月28日22.6M/S|免费SSR节点/V2ray节点/Shadowrocket节点/Trojan节点/Clash节点/Singbox节点免费节点订阅分享">乍得VPN | 5月28日22.6M/S|免费SSR节点/V2ray节点/Shadowrocket节点/Trojan节点/Clash节点/Singbox节点免费节点订阅分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-17-share-vpn.htm" title="乍得VPN | 5月17日20.8M/S|免费Trojan节点/SSR节点/Singbox节点/Shadowrocket节点/Clash节点/V2ray节点免费节点订阅分享">乍得VPN | 5月17日20.8M/S|免费Trojan节点/SSR节点/Singbox节点/Shadowrocket节点/Clash节点/V2ray节点免费节点订阅分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-26-mianfei-vpn.htm" title="乍得VPN | 4月26日19.5M/S|免费Clash节点/SSR节点/Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点免费节点订阅分享">乍得VPN | 4月26日19.5M/S|免费Clash节点/SSR节点/Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点免费节点订阅分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-16-free-vpn-node.htm" title="乍得VPN | 4月16日22.5M/S|免费Clash节点/Shadowrocket节点/Trojan节点/Singbox节点/SSR节点/V2ray节点免费节点订阅分享">乍得VPN | 4月16日22.5M/S|免费Clash节点/Shadowrocket节点/Trojan节点/Singbox节点/SSR节点/V2ray节点免费节点订阅分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-15-node-share.htm" title="乍得VPN | 5月15日18.9M/S|免费Trojan节点/Clash节点/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点免费节点订阅分享">乍得VPN | 5月15日18.9M/S|免费Trojan节点/Clash节点/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点免费节点订阅分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-21-free-vpn.htm" title="乍得VPN | 5月21日21.7M/S|免费SSR节点/Trojan节点/Shadowrocket节点/V2ray节点/Singbox节点/Clash节点免费节点订阅分享">乍得VPN | 5月21日21.7M/S|免费SSR节点/Trojan节点/Shadowrocket节点/V2ray节点/Singbox节点/Clash节点免费节点订阅分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-12-vpn-github.htm" title="乍得VPN | 4月12日18.9M/S|免费Shadowrocket节点/V2ray节点/Trojan节点/SSR节点/Clash节点/Singbox节点免费节点订阅分享">乍得VPN | 4月12日18.9M/S|免费Shadowrocket节点/V2ray节点/Trojan节点/SSR节点/Clash节点/Singbox节点免费节点订阅分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-24-top-vpn-node.htm" title="乍得VPN | 4月24日22.4M/S|免费Singbox节点/V2ray节点/SSR节点/Trojan节点/Shadowrocket节点/Clash节点免费节点订阅分享">乍得VPN | 4月24日22.4M/S|免费Singbox节点/V2ray节点/SSR节点/Trojan节点/Shadowrocket节点/Clash节点免费节点订阅分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-30-free-vpn-node.htm" title="乍得VPN | 4月30日22.3M/S|免费Clash节点/Singbox节点/Shadowrocket节点/SSR节点/V2ray节点/Trojan节点免费节点订阅分享">乍得VPN | 4月30日22.3M/S|免费Clash节点/Singbox节点/Shadowrocket节点/SSR节点/V2ray节点/Trojan节点免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-7-vpn-proxy.htm" title="乍得VPN | 5月7日22.6M/S|免费SSR节点/Clash节点/Singbox节点/Trojan节点/V2ray节点/Shadowrocket节点免费节点订阅分享">乍得VPN | 5月7日22.6M/S|免费SSR节点/Clash节点/Singbox节点/Trojan节点/V2ray节点/Shadowrocket节点免费节点订阅分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-6-vpn-github.htm" title="乍得VPN | 5月6日18.1M/S|免费Clash节点/Singbox节点/Trojan节点/Shadowrocket节点/SSR节点/V2ray节点免费节点订阅分享">乍得VPN | 5月6日18.1M/S|免费Clash节点/Singbox节点/Trojan节点/Shadowrocket节点/SSR节点/V2ray节点免费节点订阅分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-23-free-vpn.htm" title="乍得VPN | 5月23日22.9M/S|免费Shadowrocket节点/Trojan节点/Clash节点/Singbox节点/V2ray节点/SSR节点免费节点订阅分享">乍得VPN | 5月23日22.9M/S|免费Shadowrocket节点/Trojan节点/Clash节点/Singbox节点/V2ray节点/SSR节点免费节点订阅分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-16-free-node-subscribe.htm" title="乍得VPN | 5月16日22.8M/S|免费Shadowrocket节点/Trojan节点/Clash节点/V2ray节点/SSR节点/Singbox节点免费节点订阅分享">乍得VPN | 5月16日22.8M/S|免费Shadowrocket节点/Trojan节点/Clash节点/V2ray节点/SSR节点/Singbox节点免费节点订阅分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-17-share-vpn.htm" title="乍得VPN | 5月17日20.8M/S|免费Trojan节点/SSR节点/Singbox节点/Shadowrocket节点/Clash节点/V2ray节点免费节点订阅分享">乍得VPN | 5月17日20.8M/S|免费Trojan节点/SSR节点/Singbox节点/Shadowrocket节点/Clash节点/V2ray节点免费节点订阅分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-6-3-free-vpn-node.htm" title="乍得VPN | 6月3日22.4M/S|免费Trojan节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点/V2ray节点免费节点订阅分享">乍得VPN | 6月3日22.4M/S|免费Trojan节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点/V2ray节点免费节点订阅分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-3-free-node-subscribe-links.htm" title="乍得VPN | 5月3日22.6M/S|免费Singbox节点/Trojan节点/V2ray节点/Shadowrocket节点/Clash节点/SSR节点免费节点订阅分享">乍得VPN | 5月3日22.6M/S|免费Singbox节点/Trojan节点/V2ray节点/Shadowrocket节点/Clash节点/SSR节点免费节点订阅分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-30-node-share.htm" title="乍得VPN | 5月30日18.1M/S|免费Shadowrocket节点/Singbox节点/Trojan节点/Clash节点/SSR节点/V2ray节点免费节点订阅分享">乍得VPN | 5月30日18.1M/S|免费Shadowrocket节点/Singbox节点/Trojan节点/Clash节点/SSR节点/V2ray节点免费节点订阅分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-21-free-vpn.htm" title="乍得VPN | 5月21日21.7M/S|免费SSR节点/Trojan节点/Shadowrocket节点/V2ray节点/Singbox节点/Clash节点免费节点订阅分享">乍得VPN | 5月21日21.7M/S|免费SSR节点/Trojan节点/Shadowrocket节点/V2ray节点/Singbox节点/Clash节点免费节点订阅分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-13-top-vpn-node.htm" title="乍得VPN | 5月13日21.7M/S|免费Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点/SSR节点免费节点订阅分享">乍得VPN | 5月13日21.7M/S|免费Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点/SSR节点免费节点订阅分享</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -428,10 +449,10 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">28</span> <a href="/date/2026-05/" title="2026-05 归档">2026-05</a></h4>
+                <h4><span class="badge" style="float: right;">4</span> <a href="/date/2026-06/" title="2026-06 归档">2026-06</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">19</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
+                <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-05/" title="2026-05 归档">2026-05</a></h4>
             </li>
                     </ul>
     </div>
@@ -458,6 +479,9 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
                         <a href="/privacy.htm">隐私申明</a> |
                         <a href="/sitemap.xml">网站地图</a>
                     </p>
+                                        <div>特别推荐：<b><a href="javascript:;" class="js_to" data-url="https://www.futizi.net/?code=" data-type="Luniuyun" data-code="svvkQf3y" target="_blank">绿牛云</a></b> <p>高速稳定的网络加速</p>
+                        <p>畅享全球内容，访问 ChatGPT、TikTok、Google 等热门网站。
+全平台支持 · 7×24 专业客服 · 采用军工级安全加密传输技术。</p></div>
                                     <a href="/">乍得VPN 机场订阅节点官网</a> 版权所有 Powered by WordPress
             </div>
             <div class="credits"></div>
