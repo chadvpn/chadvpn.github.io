@@ -138,34 +138,14 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Matsuri 节点延迟排序如何优化网络体验？</h5></div>
-    <div class="panel-body">
-        Matsuri 会定期测速节点延迟，并结合策略组自动选择低延迟节点。无需手动切换，确保网页、视频和游戏流量通过最优节点，提高访问速度和网络稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>VLESS + Reality 与 Trojan 在性能上差异大吗？</h5></div>
-    <div class="panel-body">
-        两者性能相近。VLESS + Reality 伪装更自然，适合强封锁地区；Trojan 则依托标准 TLS 实现高速连接。选择取决于服务器支持与环境稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 如何结合规则屏蔽广告？</h5></div>
-    <div class="panel-body">
-        Surfboard 可通过规则文件匹配广告域名或 URL，并将其重定向或阻断。结合策略组自动更新规则，可实现广告屏蔽，提高浏览体验和节省带宽。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>SSR 的协议和混淆组合如何选择最适合的？</h5></div>
     <div class="panel-body">
         选择模拟 HTTPS 或 HTTP 的混淆方式，再搭配 AEAD 或协议插件，可以隐藏流量特征并提高抗封锁能力。不同网络环境需测试，选择最稳定和可靠的组合。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 的策略组可设置延迟阈值吗？</h5></div>
+    <div class="panel-heading"><h5>PassWall2 如何结合节点测速优化策略组？</h5></div>
     <div class="panel-body">
-        可以。用户可定义延迟阈值，当节点延迟超过设定值时，策略组会自动切换至其他低延迟节点，提高网络速度和稳定性，优化访问体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>WinXray 的主要特点是什么？</h5></div>
-    <div class="panel-body">
-        WinXray 是一款基于 V2Ray 核心的 Windows 客户端，界面直观，支持 VMess、VLess、Trojan、Shadowsocks 等多协议。它提供一键导入订阅、节点测速、自动分流等功能，是适合初学者和进阶用户的图形化代理工具。<hr />    </div>
+        PassWall2 会定期测速节点延迟和丢包率，并根据策略组自动选择最优节点。通过测速和自动切换，可保证网页、视频和游戏流量走低延迟节点，提升整体网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Shadowrocket 可以在哪些平台使用？</h5></div>
@@ -178,14 +158,34 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         手动切换节点可以根据延迟和用途选择最佳节点，适合在节点不稳定或特殊需求下使用。虽然不支持自动订阅更新，但足够满足轻量用户对节点管理和分流的需求。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Surfboard 如何结合规则屏蔽广告？</h5></div>
+    <div class="panel-body">
+        Surfboard 可通过规则文件匹配广告域名或 URL，并将其重定向或阻断。结合策略组自动更新规则，可实现广告屏蔽，提高浏览体验和节省带宽。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Matsuri 节点延迟排序如何优化网络体验？</h5></div>
+    <div class="panel-body">
+        Matsuri 会定期测速节点延迟，并结合策略组自动选择低延迟节点。无需手动切换，确保网页、视频和游戏流量通过最优节点，提高访问速度和网络稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Surfboard 是否支持 Clash 配置？</h5></div>
     <div class="panel-body">
         Surfboard 是一款支持多种协议的客户端应用，它能够兼容 Clash 的配置文件格式，用户只需导入 YAML 文件即可。该应用以轻量、高速著称，常用于 iOS 和 macOS 系统。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>PassWall2 如何结合节点测速优化策略组？</h5></div>
+    <div class="panel-heading"><h5>WinXray 的主要特点是什么？</h5></div>
     <div class="panel-body">
-        PassWall2 会定期测速节点延迟和丢包率，并根据策略组自动选择最优节点。通过测速和自动切换，可保证网页、视频和游戏流量走低延迟节点，提升整体网络体验。    </div>
+        WinXray 是一款基于 V2Ray 核心的 Windows 客户端，界面直观，支持 VMess、VLess、Trojan、Shadowsocks 等多协议。它提供一键导入订阅、节点测速、自动分流等功能，是适合初学者和进阶用户的图形化代理工具。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>VLESS + Reality 与 Trojan 在性能上差异大吗？</h5></div>
+    <div class="panel-body">
+        两者性能相近。VLESS + Reality 伪装更自然，适合强封锁地区；Trojan 则依托标准 TLS 实现高速连接。选择取决于服务器支持与环境稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Clash 的策略组可设置延迟阈值吗？</h5></div>
+    <div class="panel-body">
+        可以。用户可定义延迟阈值，当节点延迟超过设定值时，策略组会自动切换至其他低延迟节点，提高网络速度和稳定性，优化访问体验。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -233,16 +233,16 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/top-vpn-2026-8-9.htm" title="乍得VPN | 8月9日21.7M/S|免费Singbox节点/SSR节点/Shadowrocket节点/Trojan节点/Clash节点/V2ray节点免费节点订阅分享">乍得VPN | 8月9日21.7M/S|免费Singbox节点/SSR节点/Shadowrocket节点/Trojan节点/Clash节点/V2ray节点免费节点订阅分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-25-node-share-links.htm" title="乍得VPN | 7月25日19.3M/S|免费Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点/SSR节点/Clash节点免费节点订阅分享">乍得VPN | 7月25日19.3M/S|免费Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点/SSR节点/Clash节点免费节点订阅分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/top-vpn-2026-7-31.htm" title="乍得VPN | 7月31日19.9M/S|免费Singbox节点/V2ray节点/SSR节点/Clash节点/Trojan节点/Shadowrocket节点免费节点订阅分享">乍得VPN | 7月31日19.9M/S|免费Singbox节点/V2ray节点/SSR节点/Clash节点/Trojan节点/Shadowrocket节点免费节点订阅分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-8-15.htm" title="乍得VPN | 8月15日18M/S|免费Trojan节点/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点/SSR节点免费节点订阅分享">乍得VPN | 8月15日18M/S|免费Trojan节点/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点/SSR节点免费节点订阅分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-vpn-2026-9-1.htm" title="乍得VPN | 9月1日20.5M/S|免费SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点/Trojan节点免费节点订阅分享">乍得VPN | 9月1日20.5M/S|免费SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点/Trojan节点免费节点订阅分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-8-25.htm" title="乍得VPN | 8月25日20.4M/S|免费SSR节点/Singbox节点/Trojan节点/Shadowrocket节点/V2ray节点/Clash节点免费节点订阅分享">乍得VPN | 8月25日20.4M/S|免费SSR节点/Singbox节点/Trojan节点/Shadowrocket节点/V2ray节点/Clash节点免费节点订阅分享</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/free-vpn-2026-8-21.htm" title="乍得VPN | 8月21日22.7M/S|免费SSR节点/Singbox节点/Clash节点/V2ray节点/Trojan节点/Shadowrocket节点免费节点订阅分享">乍得VPN | 8月21日22.7M/S|免费SSR节点/Singbox节点/Clash节点/V2ray节点/Trojan节点/Shadowrocket节点免费节点订阅分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-8-5.htm" title="乍得VPN | 8月5日18.8M/S|免费Trojan节点/V2ray节点/Singbox节点/Shadowrocket节点/Clash节点/SSR节点免费节点订阅分享">乍得VPN | 8月5日18.8M/S|免费Trojan节点/V2ray节点/Singbox节点/Shadowrocket节点/Clash节点/SSR节点免费节点订阅分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-26-vpn-proxy.htm" title="乍得VPN | 7月26日18.2M/S|免费Trojan节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点/V2ray节点免费节点订阅分享">乍得VPN | 7月26日18.2M/S|免费Trojan节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点/V2ray节点免费节点订阅分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-26-vpn-node.htm" title="乍得VPN | 8月26日20.4M/S|免费Trojan节点/Singbox节点/V2ray节点/Shadowrocket节点/Clash节点/SSR节点免费节点订阅分享">乍得VPN | 8月26日20.4M/S|免费Trojan节点/Singbox节点/V2ray节点/Shadowrocket节点/Clash节点/SSR节点免费节点订阅分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/share-vpn-2026-9-3.htm" title="乍得VPN | 9月3日19.7M/S|免费Trojan节点/Shadowrocket节点/Singbox节点/SSR节点/Clash节点/V2ray节点免费节点订阅分享">乍得VPN | 9月3日19.7M/S|免费Trojan节点/Shadowrocket节点/Singbox节点/SSR节点/Clash节点/V2ray节点免费节点订阅分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-20-vpn-proxy.htm" title="乍得VPN | 8月20日22.3M/S|免费Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/Trojan节点/SSR节点免费节点订阅分享">乍得VPN | 8月20日22.3M/S|免费Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/Trojan节点/SSR节点免费节点订阅分享</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-8-28-vpn-proxy.htm" title="乍得VPN | 8月28日19.2M/S|免费Trojan节点/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点免费节点订阅分享">乍得VPN | 8月28日19.2M/S|免费Trojan节点/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点免费节点订阅分享</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-8-24-free-vpn-node.htm" title="乍得VPN | 8月24日18.7M/S|免费Trojan节点/SSR节点/V2ray节点/Shadowrocket节点/Clash节点/Singbox节点免费节点订阅分享">乍得VPN | 8月24日18.7M/S|免费Trojan节点/SSR节点/V2ray节点/Shadowrocket节点/Clash节点/Singbox节点免费节点订阅分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-22-top-vpn-node.htm" title="乍得VPN | 7月22日18.6M/S|免费Singbox节点/Shadowrocket节点/V2ray节点/SSR节点/Clash节点/Trojan节点免费节点订阅分享">乍得VPN | 7月22日18.6M/S|免费Singbox节点/Shadowrocket节点/V2ray节点/SSR节点/Clash节点/Trojan节点免费节点订阅分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/share-vpn-2026-8-19.htm" title="乍得VPN | 8月19日19M/S|免费Singbox节点/SSR节点/Shadowrocket节点/Clash节点/Trojan节点/V2ray节点免费节点订阅分享">乍得VPN | 8月19日19M/S|免费Singbox节点/SSR节点/Shadowrocket节点/Clash节点/Trojan节点/V2ray节点免费节点订阅分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-2-top-vpn-node.htm" title="乍得VPN | 9月2日18.9M/S|免费Clash节点/SSR节点/Trojan节点/Shadowrocket节点/V2ray节点/Singbox节点免费节点订阅分享">乍得VPN | 9月2日18.9M/S|免费Clash节点/SSR节点/Trojan节点/Shadowrocket节点/V2ray节点/Singbox节点免费节点订阅分享</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -254,10 +254,10 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
+                <h4><span class="badge" style="float: right;">5</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">13</span> <a href="/date/2026-07/" title="2026-07 归档">2026-07</a></h4>
+                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
             </li>
                     </ul>
     </div>
