@@ -314,6 +314,41 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>V2Ray 的传输协议选择对性能有何影响？</h5></div>
+    <div class="panel-body">
+        V2Ray 支持 TCP、WebSocket、gRPC、QUIC 等多种传输协议。不同协议在延迟、抗封锁和吞吐量上差异明显。用户可根据网络环境选择最优协议，以获得稳定且高速的连接体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Hiddify Next 如何设置流量配额限制？</h5></div>
+    <div class="panel-body">
+        管理员可在 Hiddify Next 面板为每个用户设置流量上限或带宽限制。超过配额后可自动阻止或降速，保证服务器资源合理分配，防止单用户占用过多带宽。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>WinXray 如何保证视频流畅播放？</h5></div>
+    <div class="panel-body">
+        WinXray 会结合延迟检测和策略组选择最佳节点转发视频流量。通过自动切换低延迟节点，可保证在线视频播放顺畅，减少卡顿和缓冲，提高整体体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>SSR 协议和混淆选择如何影响稳定性？</h5></div>
+    <div class="panel-body">
+        根据网络封锁情况选择合适协议和混淆方式，如 tls1.2_ticket_auth 模拟 HTTPS 流量。合理组合可提升抗封锁能力和连接稳定性，确保节点长期可用，优化网络访问。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>SSR 的混淆方式选择有什么讲究？</h5></div>
+    <div class="panel-body">
+        混淆方式决定流量伪装特性，不同方式适应不同封锁环境。常用方式如 tls1.2_ticket_auth 模拟 HTTPS，http_simple 模拟 HTTP 请求，根据环境选择可提高抗封锁能力。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>WinXray 节点健康检测如何提升网络体验？</h5></div>
+    <div class="panel-body">
+        WinXray 会定期检测节点延迟和丢包率，并结合策略组自动切换到最优节点。避免高延迟或失效节点，提高网页浏览、视频播放和游戏连接的稳定性和速度。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Clash 的规则模式有哪些？</h5></div>
+    <div class="panel-body">
+        Clash 提供三种主要模式：Global（全局代理）、Rule（规则代理）和Direct（直连）。全局模式会让所有流量通过代理；规则模式根据规则文件自动分流；直连模式则完全不经过代理。用户可根据需求灵活切换。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>如何使用 Docker 部署 sing-box 或 v2ray？</h5></div>
     <div class="panel-body">
         选择官方或社区维护的 Docker 镜像，编写 docker-compose.yml 指定配置文件挂载、网络模式与端口映射。使用容器管理可以隔离运行环境、便于日志采集并与反向代理（如 Nginx）协同工作。<hr />    </div>
@@ -324,44 +359,9 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         多路复用允许多个短连接共享同一通道，减少握手延迟和资源消耗。适合高频短连接场景，如游戏和即时通讯，可提高吞吐量和连接稳定性，优化整体网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>WinXray 如何保证视频流畅播放？</h5></div>
-    <div class="panel-body">
-        WinXray 会结合延迟检测和策略组选择最佳节点转发视频流量。通过自动切换低延迟节点，可保证在线视频播放顺畅，减少卡顿和缓冲，提高整体体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Sing-box 的多出口策略有什么作用？</h5></div>
     <div class="panel-body">
-        多出口策略允许不同流量通过不同节点访问。例如视频流量通过高速节点，普通网页使用备用节点，实现资源优化与智能分流，提高网络使用体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 的混淆方式选择有什么讲究？</h5></div>
-    <div class="panel-body">
-        混淆方式决定流量伪装特性，不同方式适应不同封锁环境。常用方式如 tls1.2_ticket_auth 模拟 HTTPS，http_simple 模拟 HTTP 请求，根据环境选择可提高抗封锁能力。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Hiddify Next 如何设置流量配额限制？</h5></div>
-    <div class="panel-body">
-        管理员可在 Hiddify Next 面板为每个用户设置流量上限或带宽限制。超过配额后可自动阻止或降速，保证服务器资源合理分配，防止单用户占用过多带宽。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>WinXray 节点健康检测如何提升网络体验？</h5></div>
-    <div class="panel-body">
-        WinXray 会定期检测节点延迟和丢包率，并结合策略组自动切换到最优节点。避免高延迟或失效节点，提高网页浏览、视频播放和游戏连接的稳定性和速度。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 的传输协议选择对性能有何影响？</h5></div>
-    <div class="panel-body">
-        V2Ray 支持 TCP、WebSocket、gRPC、QUIC 等多种传输协议。不同协议在延迟、抗封锁和吞吐量上差异明显。用户可根据网络环境选择最优协议，以获得稳定且高速的连接体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 的规则模式有哪些？</h5></div>
-    <div class="panel-body">
-        Clash 提供三种主要模式：Global（全局代理）、Rule（规则代理）和Direct（直连）。全局模式会让所有流量通过代理；规则模式根据规则文件自动分流；直连模式则完全不经过代理。用户可根据需求灵活切换。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 协议和混淆选择如何影响稳定性？</h5></div>
-    <div class="panel-body">
-        根据网络封锁情况选择合适协议和混淆方式，如 tls1.2_ticket_auth 模拟 HTTPS 流量。合理组合可提升抗封锁能力和连接稳定性，确保节点长期可用，优化网络访问。    </div>
+        多出口策略允许不同流量通过不同节点访问。例如视频流量通过高速节点，普通网页使用备用节点，实现资源优化与智能分流，提高网络使用体验。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -409,16 +409,16 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2026-9-2-top-vpn-node.htm" title="乍得VPN | 9月2日18.9M/S|免费Clash节点/SSR节点/Trojan节点/Shadowrocket节点/V2ray节点/Singbox节点免费节点订阅分享">乍得VPN | 9月2日18.9M/S|免费Clash节点/SSR节点/Trojan节点/Shadowrocket节点/V2ray节点/Singbox节点免费节点订阅分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-26-node-share.htm" title="乍得VPN | 9月26日22.7M/S|免费SSR节点/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点免费节点订阅分享">乍得VPN | 9月26日22.7M/S|免费SSR节点/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点免费节点订阅分享</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/vpn-github-2026-9-23.htm" title="乍得VPN | 9月23日20.1M/S|免费Trojan节点/Shadowrocket节点/V2ray节点/Clash节点/Singbox节点/SSR节点免费节点订阅分享">乍得VPN | 9月23日20.1M/S|免费Trojan节点/Shadowrocket节点/V2ray节点/Clash节点/Singbox节点/SSR节点免费节点订阅分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-10-31.htm" title="乍得VPN | 10月31日19.7M/S|免费V2ray节点/Singbox节点/SSR节点/Shadowrocket节点/Trojan节点/Clash节点免费节点订阅分享">乍得VPN | 10月31日19.7M/S|免费V2ray节点/Singbox节点/SSR节点/Shadowrocket节点/Trojan节点/Clash节点免费节点订阅分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-10-4-vpn-free.htm" title="乍得VPN | 10月4日22.1M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/Trojan节点/SSR节点/Clash节点免费节点订阅分享">乍得VPN | 10月4日22.1M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/Trojan节点/SSR节点/Clash节点免费节点订阅分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-12-free-vpn-node.htm" title="乍得VPN | 9月12日22.9M/S|免费Clash节点/Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点免费节点订阅分享">乍得VPN | 9月12日22.9M/S|免费Clash节点/Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点免费节点订阅分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-9-5.htm" title="乍得VPN | 9月5日19.9M/S|免费Clash节点/SSR节点/Trojan节点/Singbox节点/V2ray节点/Shadowrocket节点免费节点订阅分享">乍得VPN | 9月5日19.9M/S|免费Clash节点/SSR节点/Trojan节点/Singbox节点/V2ray节点/Shadowrocket节点免费节点订阅分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-6-vpn-proxy.htm" title="乍得VPN | 9月6日21.5M/S|免费V2ray节点/Trojan节点/SSR节点/Clash节点/Shadowrocket节点/Singbox节点免费节点订阅分享">乍得VPN | 9月6日21.5M/S|免费V2ray节点/Trojan节点/SSR节点/Clash节点/Shadowrocket节点/Singbox节点免费节点订阅分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-22-free-vpn-node.htm" title="乍得VPN | 9月22日22.4M/S|免费Clash节点/Shadowrocket节点/SSR节点/Singbox节点/Trojan节点/V2ray节点免费节点订阅分享">乍得VPN | 9月22日22.4M/S|免费Clash节点/Shadowrocket节点/SSR节点/Singbox节点/Trojan节点/V2ray节点免费节点订阅分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/top-vpn-2026-9-9.htm" title="乍得VPN | 9月9日22.6M/S|免费V2ray节点/Singbox节点/SSR节点/Clash节点/Trojan节点/Shadowrocket节点免费节点订阅分享">乍得VPN | 9月9日22.6M/S|免费V2ray节点/Singbox节点/SSR节点/Clash节点/Trojan节点/Shadowrocket节点免费节点订阅分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-10-22-vpn-free.htm" title="乍得VPN | 10月22日22M/S|免费Shadowrocket节点/SSR节点/V2ray节点/Trojan节点/Clash节点/Singbox节点免费节点订阅分享">乍得VPN | 10月22日22M/S|免费Shadowrocket节点/SSR节点/V2ray节点/Trojan节点/Clash节点/Singbox节点免费节点订阅分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-10-6-free-node-subscribe.htm" title="乍得VPN | 10月6日18.3M/S|免费Trojan节点/Singbox节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点免费节点订阅分享">乍得VPN | 10月6日18.3M/S|免费Trojan节点/Singbox节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点免费节点订阅分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-10-17.htm" title="乍得VPN | 10月17日21.5M/S|免费Trojan节点/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点/SSR节点免费节点订阅分享">乍得VPN | 10月17日21.5M/S|免费Trojan节点/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点/SSR节点免费节点订阅分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/top-vpn-2026-10-19.htm" title="乍得VPN | 10月19日18.2M/S|免费Clash节点/Shadowrocket节点/Trojan节点/SSR节点/V2ray节点/Singbox节点免费节点订阅分享">乍得VPN | 10月19日18.2M/S|免费Clash节点/Shadowrocket节点/Trojan节点/SSR节点/V2ray节点/Singbox节点免费节点订阅分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-10-9.htm" title="乍得VPN | 10月9日20.6M/S|免费Trojan节点/V2ray节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点免费节点订阅分享">乍得VPN | 10月9日20.6M/S|免费Trojan节点/V2ray节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点免费节点订阅分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/share-vpn-2026-9-27.htm" title="乍得VPN | 9月27日19.2M/S|免费Shadowrocket节点/Singbox节点/Clash节点/V2ray节点/SSR节点/Trojan节点免费节点订阅分享">乍得VPN | 9月27日19.2M/S|免费Shadowrocket节点/Singbox节点/Clash节点/V2ray节点/SSR节点/Trojan节点免费节点订阅分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/vpn-github-2026-9-19.htm" title="乍得VPN | 9月19日20M/S|免费Clash节点/V2ray节点/Shadowrocket节点/SSR节点/Singbox节点/Trojan节点免费节点订阅分享">乍得VPN | 9月19日20M/S|免费Clash节点/V2ray节点/Shadowrocket节点/SSR节点/Singbox节点/Trojan节点免费节点订阅分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-4-free-vpn-node.htm" title="乍得VPN | 9月4日18.1M/S|免费SSR节点/Singbox节点/Clash节点/Trojan节点/V2ray节点/Shadowrocket节点免费节点订阅分享">乍得VPN | 9月4日18.1M/S|免费SSR节点/Singbox节点/Clash节点/Trojan节点/V2ray节点/Shadowrocket节点免费节点订阅分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/top-vpn-2026-9-17.htm" title="乍得VPN | 9月17日18.7M/S|免费Singbox节点/SSR节点/Clash节点/V2ray节点/Trojan节点/Shadowrocket节点免费节点订阅分享">乍得VPN | 9月17日18.7M/S|免费Singbox节点/SSR节点/Clash节点/V2ray节点/Trojan节点/Shadowrocket节点免费节点订阅分享</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -430,7 +430,7 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">1</span> <a href="/date/2026-11/" title="2026-11 归档">2026-11</a></h4>
+                <h4><span class="badge" style="float: right;">8</span> <a href="/date/2026-11/" title="2026-11 归档">2026-11</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">30</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
